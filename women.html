@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+             #first{display:flex;justify-content: space-between;width:90%;margin:auto;margin-bottom:40px}
+#first>:nth-child(1){display: flex;justify-content: space-between;width:20%;}
+#first>:nth-child(2){display: flex;justify-content: space-between;width:45%;}
+#first>:nth-child(1)>a{text-decoration:none;color:black;font-family: Arial, Helvetica, sans-serif;}
+#first>:nth-child(1)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a{text-decoration:none;color:black;font-family:Verdana, Geneva, Tahoma, sans-serif}
+#sec{width:33.33%;display:flex;margin:auto}
+#sec>img{display:block;margin:auto;width:33.33%;}
+#sec{display:flex;width:90%};#sec>div{display:flex;justify-content:left;align-items:center;}
+#third{width:90%;display:flex;justify-content:space-between;background-color:white;padding:10px;
+    margin:auto;margin-top:35px;margin-bottom:5px;position:sticky;top:0}
+#third>:nth-child(1){width:55%;display:flex;justify-content:space-between;}
+#third>div>a{text-decoration:none;font-size:11px;color:#757575;font-family:Arial, Helvetica, sans-serif;}
+#third>div>a:hover{}
+#third>div+div{width:20%;
+    /* border: 1px solid green; */
+    height: 20px;
+}
+#third>div+div>a>h2{
+    margin-top: -5px;
+    margin-left: 30px;
+}
+#third>div+div>a>h2+img{
+    width: 30px;
+    margin-left: 20px;
+    padding: 30px;
+    margin-top: -1200px;
+   margin-left: 150px;
+
+       height: 20px;
+    
+}
+        #container{
+          display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        }
+ h1{
+     text-align: center;
+ }
+ #container>div{
+    
+     border: 1px solid green;
+ }
+ #container>div>img{
+     width: 100%;
+     height: 300px;
+ }
+ #container>div>button:first-child{
+    border: none;
+       
+       font-size: 60px;
+       color: rgba(128, 128, 128, 0.512);
+      
+       background-color: white;
+       width:20%;
+       height: 50px;
+       margin-left: 270px;
+      
+       margin-right: 15px;
+      cursor: pointer;
+ }
+ #container>div>button:first-child:hover{
+     color: red;
+ }
+ #container>div>img+h3{
+         color:black;
+         text-align: center;
+         margin-right: 50px;
+         margin-top: 5px;
+ }
+ #container>div>img+h3+p{
+     text-align: center;
+ }
+ 
+ #container>div>h3+p{
+        text-align: center;
+        color: grey;
+        font-size: 17px;
+        
+     }
+      #container>div>h3+p+h3{
+        text-align: center;
+        /* margin-top: 7px; */
+        margin: -10px;
+      }
+      h3+button{
+    border: 1px solid black;
+    font-size: 14px;
+   margin-left: 30px;
+  margin-top: 10px;
+    border-radius: 5px;
+    height: 30px;
+    width: 30%;
+  
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(15, 213, 15);
+    color: white;
+}
+h3+button:hover{
+    background-color: red;
+}
+button+button{
+    cursor: pointer;
+    margin-left: 110px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: red;
+    color: white
+}
+button+button:hover{
+color: white;
+background-color: rgb(15, 213, 15);
+}
+
+      </style>
+</head>
+<body>
+
+    <div id="first">
+        <div><a href="">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">KIDS</a> </div>
+        <div><a href="">Signup for Newsletter</a>
+            <a href="">My Account</a>
+            <a href="favourite.html">My Wishlist</a></div>
+        </div>
+        <div id="sec"><img src="https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20220503T161145">
+        </div>
+        <div id="pos">
+        <div id="third">
+            <div><a href="new arrival.html">NEW ARRIVALS</a>
+                <a href="">DESIGNERS</a>
+                <a href="Clothing.html">CLOTHING</a>
+                <a href="shoes.html">SHOES</a>
+                <a href="bag.html">BAGS</a>
+                <a href="Accessories.html">ACCESSORIES</a>
+                <a href="jewellery.html">JEWELRY</a>
+                <a href="Vacation.html">VACATION</a>
+                <a href="SALE.html">SALE</a></div>
+        <div>
+            <a href="cart.html">
+                <h2 >SHOPPING BAG</h2>
+                <img src="https://cdn-icons-png.flaticon.com/512/687/687259.png"></a></div>
+        </div>
+ 
+
+      <h1>Women</h1>
+      <div id="container"></div>
+
+
+</body>
+</html>
+
+<script>
+     var arr=JSON.parse(localStorage.getItem("cart")) || [];
+     
+     var array=JSON.parse(localStorage.getItem("shopbag")) || [];
+     console.log(array)
+
+     var obj=JSON.parse(localStorage.getItem("paymentpage")) || [];
+     var newarrivaldata=[
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW18/CW18_FE_642x642_2x__20220428125844.jpg",
+               write:"ZIMMERMAN",
+               info:"Terrycloth slide",
+               price:"€ 295",
+               cross:"€ 2335",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+                img_url:"https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW18/CW18_FE_642x642_2x_2_20220428125843.jpg",
+               write:"ISABEL MARANT",
+               info:" Drop earings",
+               price:"€ 227",
+               cross:"€ 379",
+               pre:"40% off"
+           
+             
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW18/CW18_FE_642x642_2x_3_20220428125845.jpg",
+               write:"ZIMMERMANN",
+               info:"Mae stripped cotton wrap blouse",
+               price:"€ 273",
+               cross:"€ 455",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW18/CW18_FE_642x642_2x_4_20220428125844.jpg",  
+               write:"JACQUEMUS",
+               info:"La jupe maxi skirt",
+               price:"€ 201",
+               cross:"€ 335",
+               pre:"40% off"
+               
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/media/static/raw/cms/l/CAT_BANNERS_SS22/CAT_BANNERS_Desktop_2x_30_20220228112048.jpg?imwidth=1180&imdensity=1",
+               write:"STAND STUDIO",
+               info:"Davina faux leather tote  ",
+               price:"€ 177",
+               cross:"€ 295",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/420/475/95/jpeg/catalog/product/7a/P00671836.jpg",
+               write:"GANNI",
+               info:"Knit midi dress ",
+               price:"€ 174",
+               cross:"€ 249",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/6f/P00580699.jpg",
+               write:"ACNE STUDIOS",
+               info:"Mohair wool-blend sweater",
+               price:"€ 147",
+               cross:"€ 245",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/c2/P00580697.jpg",
+               write:"ACNE STUDIOS",
+               info:"Mohair-blend sweater ",
+               price:"€ 147",
+               cross:"€ 245",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/14/P00584826.jpg",
+               write:"IASABEL MARANT",
+               info:"Haley floral leather bucket hat",
+               price:"€ 147",
+               cross:"€ 245",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/31/P00565408.jpg",
+               write:"ACNE STUDIOS",
+               info:"Nylon puffer coat",
+               price:"€ 276",
+               cross:"€ 395",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d1/P00576784.jpg",
+               write:"ISABEL MARANT ETOILE",
+               info:"Tess high-rise straight jeans",
+               price:"€ 119",
+               cross:"€ 239",
+               pre:"50% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e2/P00579122.jpg",
+               write:"STELLA MCCARTNEY",
+               info:"Emillie soft ankie boots",
+               price:"€ 321",
+               cross:"€ 535",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/6c/P00382657.jpg",
+               write:"BY FAR",
+               info:"Rachel croc-effect shoulder  bag",
+               price:"€ 188",
+               cross:"€ 269",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a6/P00577244.jpg",
+               write:"VINCEL",
+               info:"One-shoulder knit top",
+               price:"€ 87",
+               cross:"€ 219",
+               pre:"60% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d7/P00544131.jpg",
+               write:"CITIZENS OF HUMANITY",
+               info:"Emerson low-rise boyfriend jeans ",
+               price:"€ 171",
+               cross:"€ 245",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/f6/P00580030.jpg",
+               write:"JW ANDERSON",
+               info:"Embllished suede slipers",
+               price:"€ 374",
+               cross:"€ 535",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/3b/P00569689.jpg",
+               write:"STAND STUDIO",
+               info:"Lucille faux fur tote",
+               price:"€ 107",
+               cross:"€ 215",
+               pre:"50% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/72/P00612414.jpg",
+               write:"GANNI",
+               info:"Floral cotton poplin blouse",
+               price:"€ 99",
+               cross:"€ 165",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/0e/P00572487.jpg",
+               write:"SLVRLAKE",
+               info:"Grace high rice jeans",
+               price:"€ 276",
+               cross:"€ 395",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e1/P00493984.jpg",
+               write:"GANNI",
+               info:"Leather ankle boots",
+               price:"€ 119",
+               cross:"€ 239",
+               pre:"50% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/13/P00473050.jpg",
+               write:"BY FAR",
+               info:"Amber patent leather shoulder bag",
+               price:"€ 321",
+               cross:"€ 535",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7c/P00582570.jpg",
+               write:"FRANKIE SHOP",
+               info:"Cala cotton shirt dress",
+               price:"€ 800",
+               cross:"€ 455",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7c/P00572283.jpg",
+               write:"JACQUEMUS",
+               info:"Le Body Bormio playsuit",
+               price:"€ 188",
+               cross:"€ 269",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/15/P00580966.jpg",
+               write:"ISABEL MARANT",
+               info:"Oversized square sunglasses",
+               price:"€ 87",
+               cross:"€ 219",
+               pre:"60% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ff/P00553024.jpg",
+               write:"POUPETTE ST BARTH",
+               info:"Clara floral blouse ",
+               price:"€ 171",
+               cross:"€ 245",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/3d/P00552983.jpg",
+               write:"POUPETTE ST BARTH",
+               info:"Galia floral miniskirt",
+               price:"€ 374",
+               cross:"€ 535",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2c/P00604962.jpg",
+               write:"ISABEL MARANT",
+               info:"Chandrali silk crepe blouse",
+               price:"€ 107",
+               cross:"€ 215",
+               pre:"50% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/fc/P00585621.jpg",
+               write:"JOSEPH",
+               info:"Turteleneck wool sweater",
+               price:"€ 99",
+               cross:"€ 165",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/90/P00595933.jpg",
+               write:"STAUD",
+               info:"Domino faux leather pants",
+               price:"€ 177",
+               cross:"€ 295",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7e/P00618328.jpg",
+               write:"INUIKII",
+               info:"Curli shearing and suede shoes",
+               price:"€ 191",
+               cross:"€ 319",
+               pre:"40% off"
+           
+
+           },
+          
+          
+       ]
+           
+  
+       newarrivaldata.map(function(element){
+               var box=document.createElement("div")
+
+
+               var favr=document.createElement("button")
+               favr.innerText=element.fav
+               favr.addEventListener("click",function(){
+                   addtowishlist(element)
+               });
+
+               var image=document.createElement("img")
+               image.setAttribute("src",element.img_url)
+
+               var writen=document.createElement("h3")
+               writen.innerText=element.write
+               
+               var infor=document.createElement("p")
+               infor.innerText=element.info
+
+              
+
+               var prices=document.createElement("h3")
+               prices.innerText=element.price
+               
+               
+
+               var button=document.createElement("button")
+               button.innerText="Add to shop"
+               button.addEventListener("click",function(){
+                   addtoshop(element)
+               });
+
+               var buttons=document.createElement("button")
+               buttons.innerText="Buy Now"
+               buttons.addEventListener("click",function(){
+                   buynow(element)
+               });
+
+               box.append(favr,image,writen,infor,prices,button,buttons)
+           document.querySelector("#container").append(box);
+          function displayData(data){
+              arr.push(data)
+             
+              localStorage.setItem("fav",JSON.stringify(arr))
+          }
+           });
+           function addtowishlist(element){
+              arr.push(element)
+              alert("Your Product add to whistlist")
+               localStorage.setItem("cart",JSON.stringify(arr))
+           }
+           function addtoshop(element){
+              array.push(element)
+              alert("your product add to shop")
+               localStorage.setItem("shopbag",JSON.stringify(array))
+           }
+           function buynow(element){
+              obj.push(element)
+               localStorage.setItem("paymentpage",JSON.stringify(obj))
+           }
+          
+</script>

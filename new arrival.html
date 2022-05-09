@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW ARRIVALS</title>
+    <style>
+        *{
+            font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+        }
+         #navbar{
+             /* border: 1px solid red ; */
+             width: 100%;
+             height: 70px;
+             display: flex;
+             justify-content: space-between;
+         }
+         #navbar>div{
+             /* border: 1px solid green; */
+         }
+         #box1{
+         margin-left: 40px;
+         display: flex;
+         width: 20%;
+         margin: auto;
+         margin-left:10px;
+         }
+         #box1>div{
+             margin: auto;  
+             cursor: pointer;
+         }
+
+         #box2 {
+    display: flex;
+    margin: auto;
+    width: 43%;
+    margin-right: 50px;
+}
+ #box2>div{
+ margin: auto; 
+ font-weight: bold; 
+ cursor: pointer;          
+ }
+ #container2{
+     /* border: 1px solid green; */
+     display: flex;
+     height: 100px;
+     justify-content: space-between;
+     margin-top: 40px;
+   
+ }
+ #mythresa{
+   /* border: 1px solid black; */
+   width: 22%;
+ margin-left: 500px;
+  
+ 
+  
+ }
+ #mythresa>img{
+   width: 300px;
+     margin: auto;
+     margin-right: 50px;
+     
+ }
+   #shoppingbag{
+     /* border: 1px solid blue; */
+     display: flex;
+     width: 20%;
+     justify-content: space-between;
+      }
+   #shoppingbag>p{
+        margin-top: 25px;
+        cursor: pointer;
+    }
+ 
+   #shoppingbag>img{
+       width: 60px;
+       height: 50px;
+     margin-right: 80px;
+   }
+ 
+
+   #container3{
+       display: flex;
+        /* border: 1px solid green; */
+        width: 100%; 
+       
+       
+   }
+  
+ #container3>p{
+    letter-spacing: .8px;
+  font-size: 13px;
+  margin: auto;
+  color: grey;
+  cursor: pointer;
+ }
+ #Search{
+     margin-left: 300px;  
+     margin-right: 70px;
+    width: 200px;
+     height: 30px;
+      
+     } 
+     .drum{
+         /* border: 1px solid green; */
+         width: 20%;
+         height: 410px;
+     }
+     .drum>p{
+       margin-left: 10px;
+       color: grey;
+      cursor: pointer;
+      /* font-weight: bold; */
+     line-height: 8px  
+     
+      
+     }
+     .drum>p:hover{
+         color: blue;
+     }
+     #test{
+         /* border: 1px solid red; */
+         display: grid;
+         grid-template-columns: repeat(3,1fr);
+         grid-template-rows: repeat(auto);
+         width: 75%; 
+         gap: 25px;
+          height: 800px;
+         margin-left: 310px;
+         margin-top: -1100px;
+        
+         
+     }
+     #test>div{
+       
+          margin-top: 0px;
+     } 
+     
+     #test>div>button:first-child{
+       border: none;
+       
+        font-size: 60px;
+        color: rgba(128, 128, 128, 0.512);
+       
+        background-color: white;
+        width:20%;
+        height: 50px;
+        margin-left: 270px;
+       
+        margin-right: 15px;
+       cursor: pointer;
+     }
+     #test>div>button:first-child:hover{
+       color: red;
+     }
+     #test>div>button{
+         margin-left: 10px; 
+         height: 30px;
+         border-radius: 5px;
+         background-color:rgb(15, 213, 15);
+         color: white;
+        font-weight: bold;
+         margin-top: -25px;
+        position: sticky;
+        cursor: pointer;      
+     }
+     #test>div>h3+button:hover{
+         background-color: red;
+     }
+   
+     #test>div>button+button{
+       
+         margin-left: 145px;
+        height: 30px;
+        width: 75px;
+        background-color: red;
+        color: white;
+      
+        
+
+     }
+     #test>div>button+button:hover{
+        background-color: rgb(15, 213, 15);
+     }
+     #test>div>h3{
+         text-align: center;
+         margin-top: 10px;
+        
+     }
+     #test>div>h3+p{
+        text-align: center;
+        color: grey;
+        font-size: 17px;
+        
+     }
+      #test>div>h3+p+h3{
+        text-align: center;
+        /* margin-top: 7px; */
+        margin: -10px;
+      }
+      #test>div>img{
+          width: 100%;
+          height: 310px;
+          margin-top: -30px;
+      }
+     .open{
+         margin-top: -20px;
+         border-top: 1px solid grey;
+         width: 20%;
+     }
+     .close{
+         border-bottom: 1px solid grey;
+         /* height: 100px; */
+         width: 20%;
+         /* overflow-y: scroll; */
+        
+         /* margin-top: 5px; */
+     }
+     .close>h3{
+         width: 50%;
+     }
+     .close>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+         color: grey;
+        
+         /* font-weight: bold; */
+     }
+     .close>ol>li:hover{
+         color: blue;
+
+     }
+     
+     .designer{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 150px;
+       
+     }
+     .designers>h3{
+        width: 50%;
+        /* color: grey; */
+     }
+     .designer>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+        color: grey;
+     }
+     .designer>ol>li:hover{
+         color: blue;
+
+     }
+     
+     .colors{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 150px;
+     }
+     .color>h3{
+        width: 50%;
+        position: sticky;
+     }
+     .colors>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+        color: grey;
+     }
+     .colors>ol>li{
+        line-height: -6px;
+        margin: 10px;
+     }
+     .colors>ol>li:hover{
+         color: blue;
+
+     }
+     .patterns{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 150px;
+     }
+     .pattern>h3{
+        width: 50%;
+        position: sticky;
+     }
+     .patterns>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+         color: grey;
+         
+     }
+     .patterns>ol>li{
+        line-height: -6px;
+        margin: 10px;
+     }
+     .patterns>ol>li:hover{
+         color: blue;
+
+     }
+     #first{display:flex;justify-content: space-between;width:90%;margin:auto;margin-bottom:40px}
+#first>:nth-child(1){display: flex;justify-content: space-between;width:20%;}
+#first>:nth-child(2){display: flex;justify-content: space-between;width:45%;}
+#first>:nth-child(1)>a{text-decoration:none;color:black;font-family: Arial, Helvetica, sans-serif;}
+#first>:nth-child(1)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a{text-decoration:none;color:black;font-family:Verdana, Geneva, Tahoma, sans-serif}
+#sec{width:33.33%;display:flex;margin:auto}
+#sec>img{display:block;margin:auto;width:33.33%;}
+#sec{display:flex;width:90%};#sec>div{display:flex;justify-content:left;align-items:center;}
+#third{width:90%;display:flex;justify-content:space-between;background-color:white;padding:10px;
+    margin:auto;margin-top:35px;margin-bottom:5px;position:sticky;top:0}
+#third>:nth-child(1){width:55%;display:flex;justify-content:space-between;}
+#third>div>a{text-decoration:none;font-size:11px;color:#757575;font-family:Arial, Helvetica, sans-serif;}
+#third>div>a:hover{background-color:#f2f2f2;}
+#third>div+div{width:20%;
+    /* border: 1px solid green; */
+    height: 20px;
+}
+#third>div+div>a>h2{
+    margin-top: -5px;
+    margin-left: 30px;
+}
+#third>div+div>a>h2+img{
+    width: 30px;
+    margin-left: 20px;
+    padding: 30px;
+    margin-top: -1200px;
+   margin-left: 150px;
+
+       height: 20px;
+    
+}
+   
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div><a href="">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">KIDS</a> </div>
+        <div><a href="">Signup for Newsletter</a>
+            <a href="">My Account</a>
+            <a href="favourite.html">My Wishlist</a></div>
+        </div>
+        <div id="sec"><img src="https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20220503T161145">
+        </div>
+        <div id="pos">
+        <div id="third">
+            <div><a href="new arrival.html">NEW ARRIVALS</a>
+                <a href="">DESIGNERS</a>
+                <a href="Clothing.html">CLOTHING</a>
+                <a href="shoes.html">SHOES</a>
+                <a href="bag.html">BAGS</a>
+                <a href="Accessories.html">ACCESSORIES</a>
+                <a href="jewellery.html">JEWELRY</a>
+                <a href="Vacation.html">VACATION</a>
+                <a href="SALE.html">SALE</a></div>
+        <div>
+            <a href="cart.html">
+                <h2 >SHOPPING BAG</h2>
+                <img src="https://cdn-icons-png.flaticon.com/512/687/687259.png"></a></div>
+        </div><hr/>
+        <p id="changeText"></p></div>
+     <div class="drum">
+           <h2>NEW ARRIVALS</h2>
+           <p>Current Week</p>
+           <p>◻Tuesday</p>
+           <p>◻Monday</p>
+           <p>◻Friday</p>
+           <p>◻Thursday</p>
+           <p>◻Wednesday</p>
+           <br>
+           <p>Previous Weeks</p>
+           <p>Party</p>
+           <p>Essentials</p>
+           <p>Wedding Guest</p>
+           <p>Bridal</p>
+           <p>Back In Stock</p>
+           <p>Shoes & Bags of the Season</p>
+         </div>
+         <div class="open"></div>
+         <div class="close"><h3>Category</h3>
+            <ol>
+                <li>◻Accesorries</li>
+                <li>◻Bags</li>
+                <li>◻Clothiings</li>
+                <li>◻Jewelry</li>
+                <li>◻Shoes</li>
+            </ol>
+             </div>
+             <div class="designers"><h3>Designer</h3></div>
+            
+               
+             <div class="designer">
+                <ol>
+                    <li>◻A.P.C</li>
+                    <li>◻Alaia</li>
+                    <li>◻Balmain</li>
+                    <li>◻Botega Veneta</li>
+                    <li>◻Chloe</li>
+                    <li>◻Dolce & Gabana</li>
+                    <li>◻Givency</li>
+                    <li>◻Gucci</li>
+                    <li>◻S Max Mara</li>
+                    <li>◻3x1 N.Y.C.</li>
+                    <li>◻Alex Perry</li>
+                    <li>◻Alliita</li>
+                    <li>◻Amin</li>
+                    <li>◻Alexander</li>
+                    <li>◻Agolde</li>
+                    <li>◻Balmain</li>
+                    <li>◻Ami Paris</li>
+                    <li>◻cripper</li>
+                 </ol>
+             </div>
+             <div class="color"><h3>Color</h3></div>
+            
+               
+             <div class="colors">
+                <ol>
+                    <li>◻Blue</li>
+                    <li>◻Aqua</li>
+                    <li>◻Black</li>
+                    <li>◻White</li>
+                    <li>◻Brown</li>
+                    <li>◻Pink</li>
+                    <li>◻Green</li>
+                    <li>◻Grey</li>
+                    <li>◻Red</li>
+                    <li>◻White</li>
+                    <li>◻Sky Color</li>
+                    <li>◻Orange</li>
+                    <li>◻Dark Blue</li>
+                    <li>◻Biege</li>
+                    <li>◻Dark Green</li>
+                    <li>◻Dark Pink</li>
+                    <li>◻Blues</li>
+                    <li>◻Smoke White</li>
+                 </ol>
+             </div>
+             <div class="pattern"><h3>Pattern</h3>
+            
+               
+             <div class="patterns">
+                <ol>
+                    <li>◻Checked</li>
+                    <li>◻Embellished</li>
+                    <li>◻Embroidered</li>
+                    <li>◻Floral</li>
+                    <li>◻Patternerd</li>
+                    <li>◻Plain</li>
+                    <li>◻Polka</li>
+                    <li>◻Polka Dots</li>
+                    <li>◻Printed</li>
+                    
+                 </ol>
+             </div>
+            
+        
+         <div id="test">
+
+         </div>
+    
+</body>
+</html>
+<script>
+       var newarrivaldata=[
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/37/P00680361.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Sicily Small leather Shoulder bag",
+               price:"€ 1,895",
+           
+
+           },
+           {
+               para:"https://thumbs.dreamstime.com/b/vector-illustration-cool-new-arrival-sticker-tag-banner-megaphone-vector-illustration-new-arrival-sticker-tag-banner-169160809.jpg",
+                fav:"♡",
+                img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/1e/P00680196.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Printed Silk Bled mini dress",
+               price:"€ 1,492",
+             
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ea/P00680195.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Printed Silk Chiffon maxi dress",
+               price:"€ 1,422",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ec/P00680179.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Printed Cotton Poplin gown dress",
+               price:"€ 2,895",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/db/P00678036.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Deren Printed crop top dress",
+               price:"€ 7,895",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/86/P00682516.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Cardinate 105 sequined over the knee boots",
+               price:"€ 7,695",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/f0/P00671864.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Sicily Small leather Shoulder bag",
+               price:"€ 4,375",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/fc/P00688552.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Embellished Chainlink necklace",
+               price:"€ 2,875",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/b8/P00680187.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Alex Perry Deren printed Crop top",
+               price:"€ 1,895",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d6/P00680371.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Gucci GG silk short Twist scarf",
+               price:"€ 2,005",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/8f/P00680189.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Printed Silk chiffon mini dress",
+               price:"€ 3,755",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/03/P00680181.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Printed Cofton blend midi dress",
+               price:"€ 1,095",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/fc/P00682513.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Sicily Small leather darya sandals",
+               price:"€ 3,815",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/63/P00680173.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa -floral lace trimmed cotton minidress",
+               price:"€ 2,645",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/8e/P00680442.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Emblished chainless Earings ",
+               price:"€ 3,465",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2d/P00680174.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa -Printed Silk blend full plazzo ",
+               price:"€ 2,795",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e3/P00677191.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Redible Checked linel and wool coat",
+               price:"€ 1,375",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/06/P00677204.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Sicily Cotton- blend lame top",
+               price:"€ 1,995",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/6e/P00694530.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Sicily Small leather Hand bag",
+               price:"€ 2,990",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d5/P00677247.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Ruffle-Trimmed cotton proplin dress",
+               price:"€ 2,456",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/8d/P00694674.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Sicily Small leather sandel",
+               price:"€ 3,900",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/55/P00676415.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - x Gentle Monster Swipe 3 square sunglasses",
+               price:"€ 1,300",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/46/P00688513.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Gucci Emblished chainlink neckless",
+               price:"€ 2,295",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/37/P00694531.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Sicily Small leather pocket bag",
+               price:"€ 2,085",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/94/P00685473.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Sicily Small cotton Shoulder bag",
+               price:"€ 2,095",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/da/P00680213.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa -Feather-trimmed wikny dress",
+               price:"€ 1,395",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2b/P00680209.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa -cottton swimming wool dress",
+               price:"€ 5,495",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/6d/P00675449.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Sicily stylish cotton poplin gown ",
+               price:"€ 1,265",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/9e/P00664731.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Deren printed minidress",
+               price:"€ 3,795",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/58/P00664733.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Exclusive to Mytheresa - Deren dry run printed miniskirt ",
+               price:"€ 1,395",
+           
+
+           },
+          
+          
+       ]
+           
+       var arr=JSON.parse(localStorage.getItem("cart")) || [];
+     
+       var array=JSON.parse(localStorage.getItem("shopbag")) || [];
+       console.log(array)
+
+       var obj=JSON.parse(localStorage.getItem("paymentpage")) || [];
+    //    function displayData(data){
+       newarrivaldata.map(function(element){
+               var box=document.createElement("div")
+
+               var favr=document.createElement("button")
+               favr.innerText=element.fav
+               favr.addEventListener("click",function(){
+                   addtowishlist(element)
+               });
+               
+               var image=document.createElement("img")
+               image.setAttribute("src",element.img_url)
+
+               var writen=document.createElement("h3")
+               writen.innerText=element.write
+               
+               var infor=document.createElement("p")
+               infor.innerText=element.info
+
+               var prices=document.createElement("h3")
+               prices.innerText=element.price
+
+               var button=document.createElement("button")
+               button.innerText="Add to shop"
+               button.addEventListener("click",function(){
+                   addtoshop(element)
+               });
+
+               var buttons=document.createElement("button")
+               buttons.innerText="Buy Now"
+               buttons.addEventListener("click",function(){
+                   buynow(element)
+               });
+
+               box.append(favr,image,writen,infor,prices,button,buttons)
+           document.querySelector("#test").append(box);
+            
+           });
+        // }
+           function addtowishlist(element){
+              arr.push(element)
+              alert("Your Product add to whistlist")
+               localStorage.setItem("cart",JSON.stringify(arr))
+           }
+           function addtoshop(element){
+              array.push(element)
+              alert("your product add to shop")
+               localStorage.setItem("shopbag",JSON.stringify(array))
+           }
+           function buynow(element){
+              obj.push(element)
+               localStorage.setItem("paymentpage",JSON.stringify(obj))
+           }
+          
+
+
+</script>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VACATION</title>
+    <style>
+        *{
+            font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+        }
+        .container{
+            /* border: 1px solid green; */
+            width: 90%;
+            height:80px;
+            margin: auto;
+        }
+        .container>p{
+            text-align: center;
+            font-size: 32px;
+        }
+        p{
+            text-align: center;
+            font-size: 18px;
+        }
+        p+p{
+            text-align: center;
+            font-size: 22px;
+            margin-top: 30px;
+        }
+        .big_box{
+            overflow-x: auto;
+            display: flex;
+            /* /border: 1px solid green; */
+            width: 70%;
+            gap: 2%;
+            margin: auto;
+           
+        }
+        .box{
+
+            width: 96%;
+    gap: 1%;
+    display: flex;
+        }
+        .all_img{
+            width: 20%;
+            margin-bottom: 15px;
+        }
+       button{
+      margin-left: 50%;
+      margin-top: 20px;
+        background-color: black;
+        color: white;
+        height: 30px;
+        width: 110px;
+       }
+       .class{
+          padding-top: 30px;
+           /* border: 1px solid red; */
+           display: flex;
+           width: 80%;
+           margin: auto;
+           gap: 1%;
+       }
+       .div1{
+          width: 35%;
+           height: 300px;
+           /* border: 1px solid green; */
+       }
+       .div1>img{
+           width: 100%;
+           height: 415px;
+       }
+       .div2{
+       width: 65%;
+       }
+       .div2>img{
+           width: 100%;
+       }
+       .id{
+        padding-top: 7px;
+           /* border: 1px solid red; */
+           display: flex;
+           width: 80%;
+           margin: auto;
+           gap: 1%;
+       } 
+        .id2{
+          width: 35%;
+           height: 300px;
+           /* border: 1px solid green; */
+       }
+       .id2>img{
+           width: 100%;
+           height: 420px;
+       }
+       .id1{
+       width: 65%;
+       }
+       .id1>img{
+           width: 100%;
+       } 
+       .class{
+          padding-top: 30px;
+           /* border: 1px solid red; */
+           display: flex;
+           width: 80%;
+           margin: auto;
+           gap: 1%;
+       }
+       .div{
+           margin-top: -20px;
+          width: 35%;
+           height: 300px;
+           /* border: 1px solid green; */
+       }
+       .div>img{
+           width: 100%;
+           height: 415px;
+       }
+       .divs{
+       width: 65%;
+       margin-top: -20px;
+       }
+       .divs>img{
+           width: 100%;
+       }
+       .btn{
+        position: absolute;
+        width: 140px;
+    left: -29%;
+    top: 159%;
+    cursor: pointer;
+          
+       }
+
+       
+       .btns{
+           position: absolute;
+        
+           cursor: pointer;
+    left: 145px;
+    top: 159%;
+    width: 130px;
+}
+.bikni{
+        position: absolute;
+        width: 120px;
+    left: -19%;
+    top: 219%;
+    cursor: pointer;
+          
+       }
+       .cover{
+        position: absolute;
+        width: 120px;
+    left: 22%;
+    cursor: pointer;
+    top: 219%;
+       }
+   .summer{
+    position: absolute;
+    left: -28%;
+    top: 280%;
+    cursor: pointer;
+ height: 40px;
+ width: 130px;
+   }
+   .swim{
+    position: absolute;
+    left: 11%;
+    top: 280%;
+    cursor: pointer;
+    width: 145px;
+   }
+   .acc{
+    position: absolute;
+    left: -28%;
+    top: 340%;
+ height: 40px;
+ width: 210px;
+ left: -20%;
+ cursor: pointer;
+   }
+  .sun{
+    position: absolute;
+    /* left: -28%; */
+    top: 340%;
+ height: 40px;
+ /* width: 210px; */
+ left: 23%;
+ width: 150px;
+ cursor: pointer;
+
+  }
+  #first{display:flex;justify-content: space-between;width:90%;margin:auto;margin-bottom:40px}
+#first>:nth-child(1){display: flex;justify-content: space-between;width:20%;}
+#first>:nth-child(2){display: flex;justify-content: space-between;width:45%;}
+#first>:nth-child(1)>a{text-decoration:none;color:black;font-family: Arial, Helvetica, sans-serif;}
+#first>:nth-child(1)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a{text-decoration:none;color:black;font-family:Verdana, Geneva, Tahoma, sans-serif}
+#sec{width:33.33%;display:flex;margin:auto}
+#sec>img{display:block;margin:auto;width:33.33%;}
+#sec{display:flex;width:90%};#sec>div{display:flex;justify-content:left;align-items:center;}
+#third{width:90%;display:flex;justify-content:space-between;background-color:white;padding:10px;
+    margin:auto;margin-top:35px;margin-bottom:5px;position:sticky;top:0}
+#third>:nth-child(1){width:55%;display:flex;justify-content:space-between;}
+#third>div>a{text-decoration:none;font-size:11px;color:#757575;font-family:Arial, Helvetica, sans-serif;}
+#third>div>a:hover{}
+#third>div+div{width:20%;
+    /* border: 1px solid green; */
+    height: 20px;
+}
+#third>div+div>a>h2{
+    margin-top: -5px;
+    margin-left: 30px;
+}
+#third>div+div>a>h2+img{
+    width: 30px;
+    margin-left: px;
+    padding: 30px;
+    margin-top: -20px;
+   /* margin-left: 150px; */
+
+       height: 20px;
+    
+}
+#foot{width:80%;margin:auto;text-align:center;}
+#foot>div{display:flex;width:100%;justify-content:space-between;margin-top:20px}
+#foot>div>div{width:48%;text-align:left;}#foot>h5{margin-bottom:20px}
+#app{width:30%;height:auto;margin:auto;}#third>div>a{display:flex;align-items:center;}
+#app>h5~a>img{width:40%;margin-top:20px}#third>div>a>img{width:9%}
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div><a href="">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">KIDS</a> </div>
+        <div><a href="">Signup for Newsletter</a>
+            <a href="">My Account</a>
+            <a href="favourite.html">My Wishlist</a></div>
+        </div>
+        <div id="sec"><img src="https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20220503T161145">
+        </div>
+        <div id="pos">
+        <div id="third">
+            <div><a href="new arrival.html">NEW ARRIVALS</a>
+                <a href="">DESIGNERS</a>
+                <a href="Clothing.html">CLOTHING</a>
+                <a href="shoes.html">SHOES</a>
+                <a href="bag.html">BAGS</a>
+                <a href="Accessories.html">ACCESSORIES</a>
+                <a href="jewellery.html">JEWELRY</a>
+                <a href="Vacation.html">VACATION</a>
+                <a href="SALE.html">SALE</a></div>
+        <div>
+            <a href="cart.thtml">
+                <h2 >SHOPPING BAG</h2>
+                <img src="https://cdn-icons-png.flaticon.com/512/687/687259.png"></a></div>
+        </div><hr/>
+        <p id="changeText"></p></div>
+    <div class="container">
+        <p>
+            THE VACATION SHOP
+        </p>
+    </div>
+    <p>Your Getway Checklist for spring / summer 2022</p>
+    <p>TOP VACATION DESIGNERS</p>
+    <div class="big_box">
+        
+    <div class="box">
+          <img class="all_img" class="all_img" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/08_Carousel/VacationShop/FW21_VacationShop/VS-Brand-Carousel-1_2x_20210623110821.jpg" alt="">
+        
+          <img class="all_img" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/08_Carousel/VacationShop/FW21_VacationShop/VS-Brand-Carousel-2_2x_20210623110823.jpg" alt="">
+         <img class="all_img" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/08_Carousel/VacationShop/FW21_VacationShop/VS-Brand-Carousel-3_2x_20210623110826.jpg" alt="">
+         <img class="all_img" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/08_Carousel/VacationShop/FW21_VacationShop/VS-Brand-Carousel-5_2x_20210623110831.jpg" alt="">
+         <img class="all_img" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/08_Carousel/VacationShop/FW21_VacationShop/VS-Brand-Carousel-4_2x_20210623110829.jpg" alt="">
+         <img class="all_img" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/08_Carousel/VacationShop/FW21_VacationShop/VS-Brand-Carousel-6_2x_20210623110834.jpg" alt="">
+          <img class="all_img" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/08_Carousel/VacationShop/FW21_VacationShop/VS-Brand-Carousel-7_2x_20210623110837.jpg" alt="">
+         <img class="all_img" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/08_Carousel/VacationShop/FW21_VacationShop/VS-Brand-Carousel-8_2x_20210623110840.jpg" alt="">
+          <img class="all_img" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/08_Carousel/VacationShop/FW21_VacationShop/VS-Brand-Carousel-9_2x_20210623110844.jpg" alt="">
+         <img class="all_img" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/08_Carousel/VacationShop/FW21_VacationShop/VS-Brand-Carousel-10_2x_20210623110846.jpg" alt="">
+      </div>
+     
+      </div>
+      <button>SHOP ALL</button>
+      <div class="class">
+      <div class="div1"><button class="btn">SUMMER DRESSES »</button><img src="https://img.mytheresa.com/media/static/raw/cms/l/VS_Cruise/VacationShop_SS22_Desktop_2x_20211115092205.jpg?imwidth=1024&imdensity=1" alt=""></div>
+      <div class="div2"><button class="btns">BEACH BAGS »</button><img src="https://img.mytheresa.com/media/static/raw/cms/l/VS_Cruise/VacationShop_SS22_Desktop2_2x_20211115092207.jpg?imwidth=1024&imdensity=1" alt=""></div>
+      </div>
+        <div class="id">
+            <div class="id1"><button class="bikni">BIKNIS »</button><img src="https://img.mytheresa.com/media/static/raw/cms/l/VS_Cruise/VacationShop_SS22_Desktop3_2x_20211115092203.jpg?imwidth=1024&imdensity=1" alt=""></div>
+            <div class="id2"><button class="cover">COVER-UPS »</button><img src="https://img.mytheresa.com/media/static/raw/cms/l/VS_Cruise/VacationShop_SS22_Desktop4_2x_20211115092205.jpg?imwidth=1024&imdensity=1" alt=""></div>
+        </div>
+        <div class="class">
+            <div class="div"><button class="summer">SUMMER SHOES  »</button><img src="https://img.mytheresa.com/media/static/raw/cms/l/VS_Cruise/VacationShop_SS22_Desktop5_2x_20211115092209.jpg?imwidth=1024&imdensity=1" alt=""></div>
+            <div class="divs"><button class="swim">SWIM SUITS  »</button><img src="https://img.mytheresa.com/media/static/raw/cms/l/VS_Cruise/VacationShop_SS22_Desktop6_2x_20211115092203.jpg?imwidth=1024&imdensity=1" alt=""></div>
+            </div>
+            <div class="id">
+                <div class="id1"><button class="acc">SUMMER ACCESSORIES  »</button><img src="https://img.mytheresa.com/media/static/raw/cms/l/VS_Cruise/VacationShop_SS22_Desktop7_2x_20211115092208.jpg?imwidth=1024&imdensity=1" alt=""></div>
+                <div class="id2"><button class="sun">SUNGLASSES  »</button><img src="https://img.mytheresa.com/media/static/raw/cms/l/VS_Cruise/VacationShop_SS22_Desktop8_2x_20211115092208.jpg?imwidth=1024&imdensity=1" alt=""></div>
+            </div>
+
+
+
+
+
+        </div><hr class="line">
+        <div id="foot">
+        <h5>MYTHERESA-WOMEN'S LUXURY AND DESIGNER FASHION</h5>
+        <p>Mytheresa is the most-trusted source for finding the finest selection of luxurious womenswear. Our expert buying team travels the globe with a simple mission: to bring international fashion’s finest directly to your doorstep. With our runway-fresh new arrivals every week, an easy-to-navigate platform and a mobile app to shop on-the-go, we ensure a boutique-like feeling for a unique shopping experience.</p>
+        <div>
+            <div><ul>A LUXURY SHOPPING EXPERIENCE
+        <li>The finest edit of more than 200 international luxury brands</li>
+        <li>900 new arrivals each week directly from the runway</li>
+        <li>Well-curated selection of items for a boutique-like shopping experience</li>
+        <li>Exclusive designer collaborations and capsule collections that you won’t find anywhere else</li></ul>
+        </div>
+        <div><ul>SERVICE AND QUALITY
+            <li>Authentic products guaranteed </li>
+            <li>Fast, reliable delivery within 3 business days</li>
+            <li>Free returns and exchanges within 30 days    </li>
+            <li>Exceptional customer service available 24 hours a day, 6 days a week in 13 different languages</li></ul>
+            </div>
+        </div>
+        </div><hr class="line">
+        <div id="app">
+        <h5>SHOP WHENEVER,WHEREVER WITH THE APP</h5>
+        <a href="https://apps.apple.com/us/app/mytheresa-luxury-fashion-edit/id484615570"><img src="https://icon-library.com/images/app-store-icon/app-store-icon-7.jpg"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.mytheresa.app.mytheresa&hl=en_IN&gl=US"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png?20190913154415"></a>
+        </div><hr class="line">
+
+   
+</body>
+
+</html>

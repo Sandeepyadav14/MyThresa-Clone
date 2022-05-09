@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale</title>
+    <style>
+        *{
+            font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+        }
+        .container{
+            /* border: 1px solid green; */
+            display: flex;
+            width: 90%;
+            height: 50px;
+            margin: auto;
+        }
+        .container>div{
+            display: flex;
+            /* border: 1px solid red; */
+            margin: auto;
+            width: 20%;
+        }
+        .container>div>p{
+            margin: auto;
+        }
+        .box{
+            margin: auto;
+            /* border: 1px solid black;  */
+            width: 80%;
+            height: 100px;
+            background-color: rgb(236, 230, 230);
+          
+        }
+        .box>div{
+         margin: auto;
+            width: 85%;
+            /* border: 1px solid green; */
+            display: flex;
+            margin: 10px 10px 50px 90px;
+            gap: px;
+            /* margin: 10px 10px; */
+        }
+        .box>div>div{
+            width: 70%;
+            height: 30px;
+            margin: 40px 10px 10px 20px;
+            background-color: white;
+          
+        }
+        .box>div>div>a{
+           text-decoration: none;
+        }
+        .box>div>div>a>p{
+         
+            margin-top: 6px;
+            text-align: center;
+            font-size: 14px;
+        }
+        #boss{
+            margin: auto;
+            margin-top: 20px;
+            width: 80%;
+            height: 40px;
+            display: flex;
+           
+        }
+        #boss>p{
+            color: grey;
+            margin: auto;
+            margin-left: 20px;
+            font-size: 14px;
+            
+        }
+        .list{
+            width: 20%;
+           border-bottom: 1px solid grey;
+           
+        }
+        .list>h3{
+            margin-left: 5px;
+        }
+        .list>p{
+           margin-left: 50px;
+           /* color: rgb(80, 78, 78); */
+           cursor: pointer;
+           color:grey;
+          
+        }
+        .list>p:hover{
+            color: blue;
+        }
+        .designers{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 200px;
+     }
+     .designer>h3{
+        width: 50%;
+        position: sticky;
+     }
+     .designers>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+        color: grey;
+     }
+     .designers>ol>li{
+        line-height: -6px;
+        margin: 10px;
+     }
+     .designers>ol>li:hover{
+         color: blue;
+
+     }
+     .size{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 155px;
+       
+     }
+     .sizes>h3{
+        width: 50%;
+        position: sticky;
+     }
+     .size>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+         color: grey;
+         /* font-weight: bold; */
+         
+     }
+     .size>ol>li{
+        line-height: -6px;
+        margin: 10px;
+     }
+     .size>ol>li:hover{
+         color: blue;
+     }
+     .colors{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 200px;
+     }
+     .color>h3{
+        width: 50%;
+        position: sticky;
+     }
+     .colors>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+         color: grey;
+     }
+     .colors>ol>li{
+        line-height: -6px;
+        margin: 10px;
+     }
+     .colors>ol>li:hover{
+         color: blue;
+
+     }
+     .patterns{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 150px;
+     }
+     .pattern>h3{
+        width: 50%;
+        position: sticky;
+     }
+     .patterns>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+         color: grey;
+         /* font-weight: bold; */
+         
+     }
+     .patterns>ol>li{
+        line-height: -6px;
+        margin: 10px;
+     }
+     .patterns>ol>li:hover{
+         color: blue;
+     }
+     
+     #test{
+         /* border: 1px solid red; */
+         display: grid;
+         grid-template-columns: repeat(3,1fr);
+         grid-template-rows: repeat(auto);
+         width: 75%; 
+         gap: 25px;
+          height: 800px;
+         margin-left: 310px;
+         margin-top: -1120px;
+        
+         
+     }
+     #test>div{
+          /* border: 1px solid grey; */
+          /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+          margin-top: 0px;
+     } 
+     #test>div>img:first-child{
+     width: 80%;
+     height: 60px;
+     margin-top: 2px;
+     }
+     #test>div>button:first-child{
+       border: none;
+       
+        font-size: 60px;
+        color: rgba(128, 128, 128, 0.512);
+       
+        background-color: white;
+        width:20%;
+        height: 50px;
+        margin-left: 270px;
+       
+        margin-right: 15px;
+       cursor: pointer;
+     }
+     #test>div>img+h3{
+         color:black;
+         margin-right: 50px;
+         margin-top: 5px;
+       
+     }
+     #test>div>button:first-child:hover{
+       color: red;
+     }
+     #test>div>button{
+         margin-left: 10px; 
+         height: 30px;
+         border-radius: 5px;
+         background-color:rgb(15, 213, 15);
+         color: white;
+        font-weight: bold;
+         margin-top: -25px;
+        position: sticky;
+        cursor: pointer;      
+     }
+     #test>div>strike+h3+h3+button:hover{
+         background-color: red;
+     }
+   
+     #test>div>button+button{
+       
+         margin-left: 145px;
+        height: 30px;
+        width: 75px;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+     }
+     #test>div>button+button:hover{
+        background-color: rgb(15, 213, 15);
+     }
+     #test>div>h3{
+         text-align: center;
+         margin-top: -22px;
+         color: red;
+         margin-left: 50px;
+        
+     }
+     #test>div>h3+p{
+        text-align: center;
+        color: grey;
+        font-size: 17px;
+        
+     }
+      #test>div>h3+p+h3{
+        text-align: center;
+        /* margin-top: 7px; */
+        margin: -10px;
+      }
+      #test>div>img{
+          width: 100%;
+          height: 315px;
+          margin-top: -30px;
+      }
+      strike{
+        margin-left: 120px;
+          color: grey;
+          /* margin-top: 9px; */
+          font-weight: bold;
+          font-size: 18px;
+      }
+      #test>div>strike+h3+h3{
+          margin-top: -20px;
+          color: red;
+         margin-left: 25px;
+         margin-right: 35px;
+      }
+      #first{display:flex;justify-content: space-between;width:90%;margin:auto;margin-bottom:40px}
+#first>:nth-child(1){display: flex;justify-content: space-between;width:20%;}
+#first>:nth-child(2){display: flex;justify-content: space-between;width:45%;}
+#first>:nth-child(1)>a{text-decoration:none;color:black;font-family: Arial, Helvetica, sans-serif;}
+#first>:nth-child(1)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a{text-decoration:none;color:black;font-family:Verdana, Geneva, Tahoma, sans-serif}
+#sec{width:33.33%;display:flex;margin:auto}
+#sec>img{display:block;margin:auto;width:33.33%;}
+#sec{display:flex;width:90%};#sec>div{display:flex;justify-content:left;align-items:center;}
+#third{width:90%;display:flex;justify-content:space-between;background-color:white;padding:10px;
+    margin:auto;margin-top:35px;margin-bottom:5px;position:sticky;top:0}
+#third>:nth-child(1){width:55%;display:flex;justify-content:space-between;}
+#third>div>a{text-decoration:none;font-size:11px;color:#757575;font-family:Arial, Helvetica, sans-serif;}
+#third>div>a:hover{}
+#third>div+div{width:20%;
+    /* border: 1px solid green; */
+    height: 20px;
+}
+#third>div+div>a>h2{
+    margin-top: -5px;
+    margin-left: 30px;
+}
+#third>div+div>a>h2+img{
+    width: 30px;
+    margin-left: 20px;
+    padding: 30px;
+    margin-top: -1200px;
+   margin-left: 150px;
+
+       height: 20px;
+    
+}
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div><a href="">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">KIDS</a> </div>
+        <div><a href="">Signup for Newsletter</a>
+            <a href="">My Account</a>
+            <a href="favourite.html">My Wishlist</a></div>
+        </div>
+        <div id="sec"><img src="https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20220503T161145">
+        </div>
+        <div id="pos">
+        <div id="third">
+            <div><a href="new arrival.html">NEW ARRIVALS</a>
+                <a href="">DESIGNERS</a>
+                <a href="Clothing.html">CLOTHING</a>
+                <a href="shoes.html">SHOES</a>
+                <a href="bag.html">BAGS</a>
+                <a href="Accessories.html">ACCESSORIES</a>
+                <a href="jewellery.html">JEWELRY</a>
+                <a href="Vacation.html">VACATION</a>
+                <a href="SALE.html">SALE</a></div>
+        <div>
+            <a href="cart.html">
+                <h2 >SHOPPING BAG</h2>
+                <img src="https://cdn-icons-png.flaticon.com/512/687/687259.png"></a></div>
+        </div><hr/>
+        <p id="changeText"></p></div>
+    <div class="container">
+      <div>
+          <p>WOMEN</p>
+          <p>MEN</p>
+          <p>KIDS</p>
+      </div>
+    </div>
+    <div class="box">
+        <div>
+            <div><a href="Clothing.thtml"><p>CLOTHINGS</p></a></div>
+            <div><a href="shottes.html"><p>SHOES</p></a></div>
+            <div><a href="batg.html"><p>BAGS</p></a></div>
+            <div><a href="Atccessories.html"><p>ACCESSORIES</p></a></div>
+        </div>
+    </div>
+
+    <div id="boss">
+        <p>Women / Sale / Previous Season »</p>
+        <!-- <p>30 products</p> -->
+        <select id="sel" onchange="sort()">
+            <option value="sort">Sort By</option>
+            <option value="high">Low-to-high</option>
+            <option value="low">Price high-to-low</option>
+            <option value="new">New items</option> 
+           </select>
+           
+    </div>
+    <div class="list">
+        <p>SALE</p>
+        <h3>Previous Season</h3>
+        <p>◻Clothing</p>
+        <p>◻Bags</p>
+        <p>◻Shoes</p>
+        <p>◻Accessorries</p>
+        <p>◻Jewelry</p>
+        <p>◻Designers </p>
+        </div>
+        <div class="designer"><h3>Designer</h3></div>
+        <div class="designers">
+           <ol>
+               <li>◻Alexandro </li>
+               <li>◻Alesperry </li>
+               <li>◻Alo Yoga</li>
+               <li>◻Altuzarra</li>
+               <li>◻Ami Paris</li>
+               <li>◻Ann Demer</li>
+               <li>◻Anna Kosturova</li>
+               <li>◻Area</li>
+               <li>◻Asceno</li>
+               <li>◻Balenciaga</li>
+               <li>◻Balmian</li>
+               <li>◻Barrie</li>
+               <li>◻Barrie</li>
+               <li>◻Biege</li>
+               <li>◻Blaze Milo</li>
+               <li>◻Bonger</li>
+               <li>◻Bottega</li>
+               <li>◻Brunello s</li>
+               <li>◻Cecilllie</li>
+               <li>◻chloe</li>
+               <li>◻CO</li>
+               <li>◻Coperni</li>
+               <li>◻David Koma</li>
+               <li>◻Deveaux N</li>
+               <li>◻Dodo Lee</li>
+               <li>◻Dodo Bar Or</li>
+               <li>◻Dolce </li>
+               <li>◻Dion Lee</li>
+               <li>◻Elie Saab</li>
+               <li>◻Fuslap</li>
+               <li>◻Galvan</li>
+               <li>◻Hunza</li>
+            </ol>
+        </div>
+        <div class="sizes"><h3>Sizes</h3>
+               
+                  
+            <div class="size">
+               <ol>
+                   <li>◻XXS</li>
+                   <li>◻XS</li>
+                   <li>◻S</li>
+                   <li>◻M</li>
+                   <li>◻L</li>
+                   <li>◻M-XL</li>
+                   <li>◻XL</li>
+                   <li>◻XLL</li>
+                   <li>◻XXXL</li>
+                   <li>◻XXL</li>
+                   
+                </ol>
+            </div>
+        <div class="color"><h3>Color</h3></div>
+               
+                  
+                <div class="colors">
+                   <ol>
+                       <li>◻Blue</li>
+                       <li>◻Aqua</li>
+                       <li>◻Black</li>
+                       <li>◻White</li>
+                       <li>◻Brown</li>
+                       <li>◻Pink</li>
+                       <li>◻Green</li>
+                       <li>◻Grey</li>
+                       <li>◻Red</li>
+                       <li>◻White</li>
+                       <li>◻Sky Color</li>
+                       <li>◻Orange</li>
+                       <li>◻Dark Blue</li>
+                       <li>◻Biege</li>
+                       <li>◻Dark Green</li>
+                       <li>◻Dark Pink</li>
+                       <li>◻Blues</li>
+                       <li>◻Smoke White</li>
+                    </ol>
+                </div>
+                <div class="pattern"><h3>Pattern</h3>
+               
+                  
+                   <div class="patterns">
+                      <ol>
+                          <li>◻Checked</li>
+                          <li>◻Embellished</li>
+                          <li>◻Embroidered</li>
+                          <li>◻Floral</li>
+                          <li>◻Patternerd</li>
+                          <li>◻Plain</li>
+                          <li>◻Polka</li>
+                          <li>◻Polka Dots</li>
+                          <li>◻Printed</li>
+                          
+                       </ol>
+                   </div>
+                <div id="test">
+
+                </div>
+</body>
+</html>
+<script>
+     var arr=JSON.parse(localStorage.getItem("cart")) || [];
+     
+     var array=JSON.parse(localStorage.getItem("shopbag")) || [];
+     console.log(array)
+
+     var obj=JSON.parse(localStorage.getItem("paymentpage")) || [];
+     var newarrivaldata=[
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/1d/P00570084.jpg",
+               write:"ZIMMERMAN",
+               info:"Terrycloth slide",
+               price:"€ 295",
+               cross:"€ 2335",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+                img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e7/P00538451.jpg",
+               write:"ISABEL MARANT",
+               info:" Drop earings",
+               price:"€ 227",
+               cross:"€ 379",
+               pre:"40% off"
+           
+             
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/cd/P00558604.jpg",
+               write:"ZIMMERMANN",
+               info:"Mae stripped cotton wrap blouse",
+               price:"€ 273",
+               cross:"€ 455",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ae/P00572322.jpg",  
+               write:"JACQUEMUS",
+               info:"La jupe maxi skirt",
+               price:"€ 201",
+               cross:"€ 335",
+               pre:"40% off"
+               
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/3a/P00569677.jpg",
+               write:"STAND STUDIO",
+               info:"Davina faux leather tote  ",
+               price:"€ 177",
+               cross:"€ 295",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/6e/P00552604.jpg",
+               write:"GANNI",
+               info:"Knit midi dress ",
+               price:"€ 174",
+               cross:"€ 249",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/6f/P00580699.jpg",
+               write:"ACNE STUDIOS",
+               info:"Mohair wool-blend sweater",
+               price:"€ 147",
+               cross:"€ 245",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/c2/P00580697.jpg",
+               write:"ACNE STUDIOS",
+               info:"Mohair-blend sweater ",
+               price:"€ 147",
+               cross:"€ 245",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/14/P00584826.jpg",
+               write:"IASABEL MARANT",
+               info:"Haley floral leather bucket hat",
+               price:"€ 147",
+               cross:"€ 245",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/31/P00565408.jpg",
+               write:"ACNE STUDIOS",
+               info:"Nylon puffer coat",
+               price:"€ 276",
+               cross:"€ 395",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d1/P00576784.jpg",
+               write:"ISABEL MARANT ETOILE",
+               info:"Tess high-rise straight jeans",
+               price:"€ 119",
+               cross:"€ 239",
+               pre:"50% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e2/P00579122.jpg",
+               write:"STELLA MCCARTNEY",
+               info:"Emillie soft ankie boots",
+               price:"€ 321",
+               cross:"€ 535",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/6c/P00382657.jpg",
+               write:"BY FAR",
+               info:"Rachel croc-effect shoulder  bag",
+               price:"€ 188",
+               cross:"€ 269",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a6/P00577244.jpg",
+               write:"VINCEL",
+               info:"One-shoulder knit top",
+               price:"€ 87",
+               cross:"€ 219",
+               pre:"60% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d7/P00544131.jpg",
+               write:"CITIZENS OF HUMANITY",
+               info:"Emerson low-rise boyfriend jeans ",
+               price:"€ 171",
+               cross:"€ 245",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/f6/P00580030.jpg",
+               write:"JW ANDERSON",
+               info:"Embllished suede slipers",
+               price:"€ 374",
+               cross:"€ 535",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/3b/P00569689.jpg",
+               write:"STAND STUDIO",
+               info:"Lucille faux fur tote",
+               price:"€ 107",
+               cross:"€ 215",
+               pre:"50% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/72/P00612414.jpg",
+               write:"GANNI",
+               info:"Floral cotton poplin blouse",
+               price:"€ 99",
+               cross:"€ 165",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/0e/P00572487.jpg",
+               write:"SLVRLAKE",
+               info:"Grace high rice jeans",
+               price:"€ 276",
+               cross:"€ 395",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e1/P00493984.jpg",
+               write:"GANNI",
+               info:"Leather ankle boots",
+               price:"€ 119",
+               cross:"€ 239",
+               pre:"50% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/13/P00473050.jpg",
+               write:"BY FAR",
+               info:"Amber patent leather shoulder bag",
+               price:"€ 321",
+               cross:"€ 535",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7c/P00582570.jpg",
+               write:"FRANKIE SHOP",
+               info:"Cala cotton shirt dress",
+               price:"€ 800",
+               cross:"€ 455",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7c/P00572283.jpg",
+               write:"JACQUEMUS",
+               info:"Le Body Bormio playsuit",
+               price:"€ 188",
+               cross:"€ 269",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/15/P00580966.jpg",
+               write:"ISABEL MARANT",
+               info:"Oversized square sunglasses",
+               price:"€ 87",
+               cross:"€ 219",
+               pre:"60% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ff/P00553024.jpg",
+               write:"POUPETTE ST BARTH",
+               info:"Clara floral blouse ",
+               price:"€ 171",
+               cross:"€ 245",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/3d/P00552983.jpg",
+               write:"POUPETTE ST BARTH",
+               info:"Galia floral miniskirt",
+               price:"€ 374",
+               cross:"€ 535",
+               pre:"30% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2c/P00604962.jpg",
+               write:"ISABEL MARANT",
+               info:"Chandrali silk crepe blouse",
+               price:"€ 107",
+               cross:"€ 215",
+               pre:"50% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/fc/P00585621.jpg",
+               write:"JOSEPH",
+               info:"Turteleneck wool sweater",
+               price:"€ 99",
+               cross:"€ 165",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/90/P00595933.jpg",
+               write:"STAUD",
+               info:"Domino faux leather pants",
+               price:"€ 177",
+               cross:"€ 295",
+               pre:"40% off"
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7e/P00618328.jpg",
+               write:"INUIKII",
+               info:"Curli shearing and suede shoes",
+               price:"€ 191",
+               cross:"€ 319",
+               pre:"40% off"
+           
+
+           },
+          
+          
+       ]
+           
+  
+       newarrivaldata.map(function(element){
+               var box=document.createElement("div")
+
+
+               var favr=document.createElement("button")
+               favr.innerText=element.fav
+               favr.addEventListener("click",function(){
+                   addtowishlist(element)
+               });
+
+               var image=document.createElement("img")
+               image.setAttribute("src",element.img_url)
+
+               var writen=document.createElement("h3")
+               writen.innerText=element.write
+               
+               var infor=document.createElement("p")
+               infor.innerText=element.info
+
+               var crprice=document.createElement("strike")
+               crprice.innerText=element.cross
+
+               var prices=document.createElement("h3")
+               prices.innerText=element.price
+               
+               var precentage=document.createElement("h3")
+               precentage.innerText=element.pre
+
+               var button=document.createElement("button")
+               button.innerText="Add to shop"
+               button.addEventListener("click",function(){
+                   addtoshop(element)
+               });
+
+               var buttons=document.createElement("button")
+               buttons.innerText="Buy Now"
+               buttons.addEventListener("click",function(){
+                   buynow(element)
+               });
+
+               box.append(favr,image,writen,infor,crprice,prices,precentage,button,buttons)
+           document.querySelector("#test").append(box);
+          function displayData(data){
+              arr.push(data)
+             
+              localStorage.setItem("fav",JSON.stringify(arr))
+          }
+           });
+           function addtowishlist(element){
+              arr.push(element)
+              alert("Your Product add to whistlist")
+               localStorage.setItem("cart",JSON.stringify(arr))
+           }
+           function addtoshop(element){
+              array.push(element)
+              alert("your product add to shop")
+               localStorage.setItem("shopbag",JSON.stringify(array))
+           }
+           function buynow(element){
+              obj.push(element)
+               localStorage.setItem("paymentpage",JSON.stringify(obj))
+           }
+          
+
+</script>
+</body>
+</html>

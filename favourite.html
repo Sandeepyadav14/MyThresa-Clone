@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .test{
+           /* border: 1px solid red; */
+           width: 100%;
+           height: 800px;
+           display: grid;
+           grid-template-columns: repeat(3,1fr);
+           grid-template-rows: repeat(auto);
+           width: 75%; 
+         gap: 25px;
+          height: 800px;
+          margin: auto;
+           }
+       .test>div{
+           margin-top: 40px;
+           /* border: 1px solid green; */
+           /* width: 95%;
+           height: 400px; */
+           }
+           .test>div>img{
+           width: 80%;
+           margin-left: 354x;
+           height: 300px;
+           }
+           
+  
+     .test>div>h3{
+         text-align: center;
+         margin-top: 10px;
+        
+     }
+     .test>div>h3+p{
+        text-align: center;
+        color: grey;
+        font-size: 17px;
+        
+     }
+      .test>div>h3+p+h3{
+        text-align: center;
+        /* margin-top: 7px; */
+        margin: -10px;
+      }
+    
+     
+      #first{display:flex;justify-content: space-between;width:90%;margin:auto;margin-bottom:40px}
+#first>:nth-child(1){display: flex;justify-content: space-between;width:20%;}
+#first>:nth-child(2){display: flex;justify-content: space-between;width:45%;}
+#first>:nth-child(1)>a{text-decoration:none;color:black;font-family: Arial, Helvetica, sans-serif;}
+#first>:nth-child(1)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a{text-decoration:none;color:black;font-family:Verdana, Geneva, Tahoma, sans-serif}
+#sec{width:33.33%;display:flex;margin:auto}
+#sec>img{display:block;margin:auto;width:33.33%;}
+#sec{display:flex;width:90%};#sec>div{display:flex;justify-content:left;align-items:center;}
+#third{width:90%;display:flex;justify-content:space-between;background-color:white;padding:10px;
+    margin:auto;margin-top:35px;margin-bottom:5px;position:sticky;top:0}
+#third>:nth-child(1){width:55%;display:flex;justify-content:space-between;}
+#third>div>a{text-decoration:none;font-size:11px;color:#757575;font-family:Arial, Helvetica, sans-serif;}
+#third>div>a:hover{background-color:#f2f2f2;}
+#third>div+div{width:20%;
+    /* border: 1px solid green; */
+    height: 20px;
+}
+.shop{
+    /* border: 1px solid red; */
+    margin: auto;
+    height: 30px;
+}
+.shop>h2{
+    font-size: 29px;
+    text-align: center;
+    margin-top: -15px;
+    /* border-bottom: 1px solid grey; */
+    color: grey;
+}
+h3+button{
+    margin-left: 10px;
+    margin-top: -30px;
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(15, 213, 15);
+    color: white;
+  font-weight: bold;
+}
+h3+button:hover{
+ background-color: red;
+}
+h3+button+button{
+    margin-left: 150px;
+    margin-top: -30px;
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+}
+h3+button+button:hover{
+    background-color: rgb(15, 213, 15);
+}
+button+button+button{
+    color: red;
+    cursor: pointer;
+    margin-left: 150px;
+    margin-top: -80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+button+button+button:hover{
+    color: white;
+background-color: black;
+}
+    </style>  
+</head>
+<body>
+    <div id="first">
+        <div><a href="">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">KIDS</a> </div>
+        <div><a href="">Signup for Newsletter</a>
+            <a href="">My Account</a>
+            <a href="">My Wishlist</a></div>
+        </div>
+        <div id="sec"><img src="https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20220503T161145">
+        </div>
+        <div id="pos">
+        <div id="third">
+        <div><a href="">NEW ARRIVALS</a>
+            <a href="">DESIGNERS</a>
+            <a href="">CLOTHING</a>
+            <a href="">SHOES</a>
+            <a href="">BAGS</a>
+            <a href="">ACCESSORIES</a>
+            <a href="">JEWELRY</a>
+            <a href="">VACATION</a>
+            <a href="">SALE</a></div>
+        <div>
+            <a href="">
+                <h2 ></h2>
+                <img src=""></a></div>
+        </div><hr/>
+        <p id="changeText"></p></div>
+        <div class="shop">
+    <h2>
+        Whistlist
+    </h2>
+        </div>
+       <div class="test">
+
+       </div>       
+</body>
+</html>
+<script>
+     var arr = JSON.parse(localStorage.getItem("cart"));
+   console.log(arr);
+
+
+    var array=JSON.parse(localStorage.getItem("shopbag")) || [];
+       
+
+       var obj=JSON.parse(localStorage.getItem("paymentpage")) || [];
+    
+    //   var arr=JSON.parse(localStorage.getItem("favourite")) || [];
+    //  console.log(arr)
+     arr.map(function(element,index){
+               var box=document.createElement("div")
+
+
+            //    var favr=document.createElement("button")
+            //    favr.innerText=element.fav
+            //    favr.addEventListener("click",function(){
+            //        addtowishlist(element)
+            //    });
+               
+               var image=document.createElement("img")
+               image.setAttribute("src",element.img_url)
+
+               var writen=document.createElement("h3")
+               writen.innerText=element.write
+               
+               var infor=document.createElement("p")
+               infor.innerText=element.info
+
+               var prices=document.createElement("h3")
+               prices.innerText=element.price
+
+               var button=document.createElement("button")
+               button.innerText="Add to shop"
+               button.addEventListener("click",function(){
+                   addtoshop(element)
+               });
+
+               var buttons=document.createElement("button")
+               buttons.innerText="Buy Now"
+               buttons.addEventListener("click",function(){
+                   buynow(element)
+               });
+               var btn = document.createElement("button");
+    btn.innerText = "Remove";
+    btn.addEventListener("click", function () {
+      removeItem(element, index);
+    });
+
+
+               box.append(image,writen,infor,prices,button,buttons,btn)
+           document.querySelector(".test").append(box);
+            
+            });
+            function addtoshop(element){
+              array.push(element)
+              alert("your product add to shop")
+               localStorage.setItem("shopbag",JSON.stringify(array))
+           }
+           function buynow(element){
+              obj.push(element)
+               localStorage.setItem("paymentpage",JSON.stringify(obj))
+           }
+            
+           function removeItem(element, index) {
+    // console.log(element, index);
+  arr.splice(index, 1);
+    // console.log(array);
+    localStorage.setItem("cart", JSON.stringify(arr));
+    window.location.reload();
+  }
+        
+</script>

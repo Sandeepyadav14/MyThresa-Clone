@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+    <script src="alert/dist/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="alert/dist/sweetalert.css">
+    <!-- <link rel="stylesheet" href="vishwa-mywishlist-sign-in.css"> -->
+<style>
+    
+
+#vtopfirsthe{
+    margin-top: 50px;
+}
+
+
+#vouter {
+    height: 900px;
+    width: auto;
+    /* border: red 1px solid; */
+    margin-top: -50px;
+
+}
+h1{
+margin-top: 150px;
+font-size: 50px; 
+text-align: center ;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-weight: lighter;
+font-family: Arial,Helvetica,sans-serif;
+}
+#vstatustrack{
+display: flex; justify-content: space-evenly; font-size: 25px;
+margin-top: 80px;
+color: grey;
+}
+#vsmallbox{
+
+display: flex;
+
+}
+
+#smallbox{
+height: 16px; width: 16px; 
+border: rgb(32, 19, 19) 1px solid;
+/* background-color: rgb(49, 25, 185); */
+display: flex; 
+justify-content: space-evenly;
+margin-top: -16px;
+}
+hr{
+margin-top: 15px;
+}
+#vsmallbox>div:nth-child(1){
+margin-left:200px; background-color: rgb(245, 241, 241);
+}
+#vsmallbox>div:nth-child(2){
+margin-left: 240px;  background-color:  rgb(245, 241, 241);
+}
+#vsmallbox>div:nth-child(3){
+margin-left: 200px; background-color: rgb(245, 241, 241);
+}
+#vsmallbox>div:nth-child(4){
+margin-left: 220px; background-color: rgb(245, 241, 241);
+}
+#vsmallbox>div:nth-child(5){
+margin-left: 220px; background-color:  rgb(245, 241, 241);
+}
+#emailpasswordparent{
+
+}
+#p11{
+
+
+font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+letter-spacing: .5px;
+text-transform: uppercase;
+color: #000;
+font-weight: 20;
+
+}
+#p22{
+color: #757575;
+margin-bottom: 30px;
+font-weight: 50;
+font-size: 17px;
+}
+
+#emailpasswordparent{
+height: auto; width: 80%; 
+margin:auto;
+/* border: red 1px solid;  */
+display: flex;
+margin-top: 30px;
+font-family: 'Times New Roman', Times, serif; font-weight: lighter;
+}
+#emailpasswordparentleft{
+height: 600px; width: 48%; 
+/* border: rgb(17, 0, 255) 1px solid; */
+
+}
+
+#email{
+width: 100%;width: 100%;width: 100%;
+height: 30px;
+-moz-appearance: none;
+-webkit-appearance: none;
+line-height: 1.2;
+color: #757575;
+background-color: #fff;
+padding: 5px 0 5px 12px;
+border: 0;
+border-radius: 0;
+border: rgb(187, 186, 186) 1px solid;
+
+}
+#op1{
+width: 103%;
+height: 40px;
+-moz-appearance: none;
+-webkit-appearance: none;
+line-height: 1.2;
+color: #757575;
+cursor: pointer;
+background-color: #fff;
+padding: 5px 0 5px 12px;
+border: 0;
+border-radius: 0;
+border: rgb(187, 186, 186) 1px solid;
+}
+#password1{
+width: 100%;
+height: 30px;
+-moz-appearance: none;
+-webkit-appearance: none;
+line-height: 1.2;
+color: #757575;
+background-color: #fff;
+padding: 5px 0 5px 12px;
+border: 0;
+border-radius: 0;
+border: rgb(187, 186, 186) 1px solid;
+}
+#password2{
+width: 100%;width: 100%;
+height: 30px;
+-moz-appearance: none;
+-webkit-appearance: none;
+line-height: 1.2;
+color: #757575;
+background-color: #fff;
+padding: 5px 0 5px 12px;
+border: 0;
+border-radius: 0;
+border: rgb(187, 186, 186) 1px solid;
+
+}
+#firstname{
+width: 100%;width: 100%;
+height: 30px;
+-moz-appearance: none;
+-webkit-appearance: none;
+line-height: 1.2;
+color: #757575;
+background-color: #fff;
+padding: 5px 0 5px 12px;
+border: 0;
+border-radius: 0;
+border: rgb(187, 186, 186) 1px solid;
+
+}
+#lastname{
+width: 100%;width: 100%;
+height: 30px;
+-moz-appearance: none;
+-webkit-appearance: none;
+line-height: 1.2;
+color: #757575;
+background-color: #fff;
+padding: 5px 0 5px 12px;
+border: 0;
+border-radius: 0;
+border: rgb(187, 186, 186) 1px solid;
+
+}
+#vmail{
+width: 100%;width: 100%;
+height: 30px;
+-moz-appearance: none;
+-webkit-appearance: none;
+line-height: 1.2;
+color: #757575;
+background-color: #fff;
+padding: 5px 0 5px 12px;
+border: 0;
+border-radius: 0;
+border: rgb(187, 186, 186) 1px solid;
+
+}
+#vpassword{
+width: 100%;width: 100%;
+height: 30px;
+-moz-appearance: none;
+-webkit-appearance: none;
+line-height: 1.2;
+color: #757575;
+background-color: #fff;
+padding: 5px 0 5px 12px;
+border: 0;
+border-radius: 0;
+border: rgb(187, 186, 186) 1px solid;
+
+}
+#requiredfields{
+color: rgb(117, 100, 100); font-size: 15px;
+font-family: Arial,Helvetica,sans-serif; font-weight: 20;
+}
+#forgotpassword{
+color: rgb(117, 100, 100); font-size: 15px; margin-top: -25px;font-weight: 25;
+font-family: Arial,Helvetica,sans-serif;
+
+}
+#proceedbtn{
+border-radius: 0%; background-color: black;
+color: white; height: 38px;
+width:100px;
+font-family: Arial, Helvetica, sans-serif;
+}
+#emailpasswordparentright{
+height: 600px; width: 40%;
+ /* border: red 1px solid;  */
+ margin-left: 2px;
+} 
+#emailpasswordparentright {
+margin-left: 70px;
+} 
+#proceedwithoutlogin{
+margin-top: 50px;   color: rgb(49, 43, 43); font-size: 20px;
+font-family: Arial,Helvetica,sans-serif; font-weight: 20;
+}#proceedwithoutlogin2{
+margin-top: 30px;   color: rgb(114, 108, 108); font-size: 20px;
+font-family: Arial,Helvetica,sans-serif; font-weight: 20;
+}
+#proceedwithoutbtn{
+border-radius: 0%; background-color: black;
+color: white; height: 30px;
+width:220px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.vl {
+border-left: 1px solid rgb(209, 205, 205);
+height: 100%;
+position: absolute;
+left: 50%;
+margin-top:4%;
+/* margin-left: -3px; */
+top: 0;
+
+}
+#lastlinev{
+text-align: center; font-size: 25px;     color: rgb(114, 108, 108); 
+font-family: Arial,Helvetica,sans-serif; font-weight: 20;  margin-top: -150px;
+
+}
+#vlastdiv{
+/* border: rgb(187, 186, 186) 1px solid; */
+height: auto; width: auto;
+display: flex; justify-content: center; 
+}
+#vlastdiv1{
+border: rgb(187, 186, 186) 1px solid;
+height:300px; width: 40%; margin-right: 20px;
+
+}
+#vlastdiv2{
+border: rgb(187, 186, 186) 1px solid;
+height: 300px; width: 40%; margin-left: 20px;
+
+}
+#vlastdiv1>img{
+
+height:60px; width: 60px; 
+margin:auto; margin-left: 235px;
+ margin-top: 35px;
+
+}
+#vlastdiv2>img{
+
+height:120px; width: 120px;
+margin:auto; margin-left: 200px;
+ margin-top: 5px;
+
+}
+#vlastdiv1>h3{
+
+  
+font-size: 25px;  color: rgb(92, 89, 89); margin-top: -10px;
+
+font-family: Arial,Helvetica,sans-serif;
+text-align: center; margin-top: 15px; font-weight: 10;
+
+}
+#vlastdiv2>h3{
+
+font-size: 25px;  color: rgb(92, 89, 89); margin-top: -10px;
+
+font-family: Arial,Helvetica,sans-serif;
+text-align: center;  font-weight: 10;
+
+}
+#vbottomline{
+display: flex; width: 90%; justify-content: space-between; margin-bottom: 50px;
+/* border: pink 1px solid; */
+margin: auto ;
+}
+#vbottomline1{
+font-size: 20px; color: rgb(92, 89, 89); 
+}
+#vbottomline2{
+display: flex; 
+ /* border: red 1px solid; */
+height: 20px; width: 500px;  justify-content: space-around;margin-left: 50px;
+
+}
+#vbottomline2>div{
+  font-size: 20px; color: rgb(92, 89, 89);  
+
+}
+#lastbottomv{
+width: 90%;
+}
+
+#hr2{
+margin-top: -90px;
+}
+.pa1{
+font-family: Arial,Helvetica,sans-serif;
+letter-spacing: .8px;
+line-height: 19px;
+color: #757575;
+cursor: pointer;
+vertical-align: middle;
+margin-bottom: 0
+}
+#h31{
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+text-transform: uppercase;
+font-size: 14px;
+  letter-spacing: .8px;
+  color: #000;
+  font-weight: 400;
+
+}
+label {
+    padding-left: 8px;
+  margin: 0;
+  color: #757575;
+
+}
+#p31{
+    text-align: center;
+    color: #9f2943 !important;
+
+line-height: normal;
+
+position: relative;
+top: 50%;
+margin: 0 40px;
+white-space: nowrap;
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+#submit{
+    padding: 7px 20px;
+border-radius: 0px;
+background-color: #f2f2f2;
+cursor: pointer;
+text-transform: none;
+overflow: visible;
+letter-spacing: .8px;
+border: none;
+}
+#submit:hover{
+    background-color: #bdbdbd;
+}
+input[type="password"].validation-failed{
+    border-color: #d91a00;
+}
+</style>
+
+</head>
+<body>
+    <p id="p31">For a short time only: free shipping on all orders</p>
+    <div id="emailpasswordparent">
+        
+        <div id="emailpasswordparentleft">
+
+            
+            <form id="form" style="width: 94%;">
+                <h3 id="h31" style="margin-top: -1px;"> Create an Account</h3>
+                <p id="p22">Please enter the following information to create your account. </p> 
+                <div id="gander" required>
+                    <input id="gander1" name="gender1" value="Ms." type="radio" >
+                    <label>Ms.</label>
+                    <input id="gander1" name="gender1" value="Mrs." type="radio" >
+                    <label>Mrs.</label>
+                    <input id="gander1" name="gender1" value="Mr" type="radio" >
+                    <label>Mr.</label>
+                </div>
+                
+                <br>
+                <br>
+                <select name="op1" id="op1" title="academic title" required>
+                    <option value="">academic title</option>
+                    <option value=""></option>
+                    <option value="Dr">Dr.</option>
+                    <option value="Prof">Prof.</option>
+                    <option value="drprof">Prof.Dr.</option>
+                  
+                </select>
+               
+                <br><br>
+                <input id="firstname" type="text" placeholder="first name *" onfocus="" required><br><br>
+                <input id="lastname" type="text" placeholder="last name *" required><br><br>
+                <input id="email" type="email" placeholder="Email address *"><br><br>
+                <input id="password1" type="password" placeholder="Password *" required><br><br>
+                <input id="password2" type="password" placeholder="Confirm Password *" required><br><br>
+                <div class="input-box">
+                    <label class="pa1"  for="is_subscribed">
+                        <input  type="checkbox" checked="checked" name="is_subscribed" title="Sign Up for Newsletter" value="1" id="is_subscribed" class="checkbox" required>
+                       From now on I will receive the Mytheresa Newsletter with selected fashion offers. If I do not wish to receive the newsletter, I can unsubscribe at any time free of charge at <a href="mailto:privacy@mytheresa.com">privacy@mytheresa.com</a>.                      </label>
+                </div><br><br>
+                <p id="p22">
+                    I agree that Mytheresa may insert analytical web beacons into the newsletter and create a personalized 
+                    user profile based on my purchase and usage behavior, including sending a notification when I have placed 
+                    something in the shopping cart. Further details can be found in our <a href="https://www.mytheresa.com/int_en/service/privacy-policy/">Privacy Policy</a>, 
+                    clause 5. I understand that I can revoke my consent at any time by emailing <a href="mailto:privacy@mytheresa.com">privacy@mytheresa.com</a>.                    
+                </p>
+                <p id="p22">* required fields</p>
+                <input ID="submit" type="submit" value="Register" />
+
+            </form>
+          
+        </div>
+        <div class="vl"> </div>
+
+        <div id="emailpasswordparentright">
+            <h3 id="h31" style="margin-top: -1px;">Already registered?</h3>
+            <p id="p22">If you have an account with us, please log in.</p> 
+            <input id="vmail" type="text" placeholder="Email address *"><br><br>
+            <input id="vpassword" type="text" placeholder="Password * SHOW"  >
+                        <h3 id="requiredfields"> *required fields</h3>
+                        <br>
+                        <h3 id="forgotpassword"> <u> Forgot Your Password?</u></h3>
+                        <br>
+                        <button ID="proceedbtn" onclick="gplogin()">LOGIN</button>
+
+                        <h2 id="p22">At Mytheresa, we keep your information secure. As a result, it will be necessary for
+                             you to log in to your account before you are able to place an order or change the information on 
+                             your account. You will be asked to log in to complete your 
+                             order even if you have already been greeted on the website.
+                     </h2> 
+        </div>
+      
+
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+        document.querySelector("#form").addEventListener("submit", signupsubmit);
+        var signuparr=JSON.parse(localStorage.getItem("signupk")) || [];
+        var gender=form.gander1.value;
+        var academic=form.op1.value;
+        var name1=form.firstname.value;
+        var name2=form.lastname.value;
+        var password1=document.getElementById('password1').value;
+        var password2=document.getElementById('password2').value;
+      //  var errorelei=document.getElementById('errorele');
+        var emaili=document.getElementById("email").value;
+        var subscriber=document.getElementById("is_subscribed").value;
+
+      
+       
+        function signupsubmit(){    
+            event.preventDefault();    
+            // if(!isNaN(name1)){  
+        
+            //                 return false;  
+            //                 }                
+            // if(!isNaN(name1)){  
+            //         return false;  
+            //     }   
+            //     if(password1.length < 8) {     
+            //        return false;  
+            //          }       
+                
+            //     if(password2.length < 8) {     
+            //        return false;  
+            //          }       
+                             
+               if(password1 != password2) {  
+                 return false;  
+                } 
+                else {  
+                    console.log("sucsess")
+                // alert ("Your password created successfully");  
+                // document.write("JavaScript form has been submitted successfully");  
+                }  
+                
+         
+        var signupobj={
+                    gender:form.gander1.value,
+                    academic:form.op1.value,
+                    firstname:form.firstname.value,
+                    lastname:form.lastname.value,
+                    emaili:document.getElementById("email").value,
+                    password:document.getElementById('password1').value,
+                  
+                    subscriber:document.getElementById("is_subscribed").value
+                    };
+                    signuparr.push(signupobj);
+                    
+                    localStorage.setItem("signupk",JSON.stringify(signuparr));
+                    console.log(signupobj)
+                    alert("account successfyl")
+                
+
+                }
+    //login 
+    function gplogin(){
+        var vemaili=document.getElementById("vmail").value;
+        var vpassword1=document.getElementById('vpassword').value;
+        var signupar=JSON.parse(localStorage.getItem("signupk")) 
+        event.preventDefault();
+        var newObject=true;
+        var login=false;
+       
+        newObject = signupar.filter(function(value){
+               if(value.password==vpassword1 && value.emaili==vemaili) 
+               {
+               
+                login=true;
+               }
+               if(value.password!==vpassword1 && value.emaili!==vemaili) 
+               {
+               
+                 login=false;
+                 
+               }
+            
+                      });    
+                      if(login===true)
+                    {      
+                        alert("successfuly login");
+                         window.location.href="women.html";
+                    }  
+                    else{
+                        alert("email and password not match");
+                    }       
+            
+               
+            }
+    
+            
+</script>

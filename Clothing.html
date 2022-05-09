@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing</title>
+    <style>
+        *{
+            font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+        }
+        #container{
+            /* border: 1px solid green; */
+            width: 100%;
+            height: 40px;
+        }
+        #container>h3{
+            text-align: center;
+        font-size: 22px;
+        margin-top:-1px;
+        color: grey;
+        }
+        #box{
+            margin-top: -30px;
+            /* margin-top: 25px; */
+            /* border: 1px solid green; */
+            width: 100%;
+            height: 40px;
+            display: flex;
+           
+        }
+        #box>p{
+            color: grey;
+            margin: auto;
+            margin-left: 20px;
+            
+        }
+        .list{
+            width: 20%;
+           border-bottom: 1px solid grey;
+           
+        }
+        .list>p{
+           margin-left: 50px;
+           /* color: rgb(80, 78, 78); */
+           cursor: pointer;
+          color: grey;
+           /* font-weight: bold; */
+        }
+        .list>p:hover{
+            color: blue;
+        }
+        .designers{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 200px;
+     }
+     .designer>h3{
+        width: 50%;
+        position: sticky;
+     }
+     .designers>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+         color: grey;
+     }
+     .designers>ol>li{
+        line-height: -6px;
+        margin: 10px;
+     }
+     .designers>ol>li:hover{
+         color: blue;
+
+     }
+     .colors{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 200px;
+     }
+     .color>h3{
+        width: 50%;
+        position: sticky;
+     }
+     .colors>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+         color: grey;
+     }
+     .colors>ol>li{
+        line-height: -6px;
+        margin: 10px;
+     }
+     .colors>ol>li:hover{
+         color: blue;
+
+     }
+     .patterns{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 150px;
+     }
+     .pattern>h3{
+        width: 50%;
+        position: sticky;
+     }
+     .patterns>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+        color: grey;
+         
+     }
+     .patterns>ol>li{
+        line-height: -6px;
+        margin: 10px;
+     }
+     .patterns>ol>li:hover{
+         color: blue;
+
+     }
+     
+   
+     #test{
+         /* /border: 1px solid red; */
+         display: grid;
+         grid-template-columns: repeat(3,1fr);
+         grid-template-rows: repeat(auto);
+         width: 75%; 
+         gap: 25px;
+          height: 800px;
+         margin-left: 310px;
+        
+         margin-top: -1300px;
+        
+         
+     }
+     #test>div{
+          /* border: 1px solid grey; */
+          /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+          margin-top: 0px;
+     } 
+     #test>div>img:first-child{
+     width: 80%;
+     height: 60px;
+     margin-top: 2px;
+     }
+     #test>div>button:first-child{
+       border: none;
+       
+        font-size: 60px;
+        color: rgba(128, 128, 128, 0.512);
+       
+        background-color: white;
+        width:20%;
+        height: 50px;
+        margin-left: 270px;
+       
+        margin-right: 15px;
+       cursor: pointer;
+     }
+     #test>div>button:first-child:hover{
+       color: red;
+     }
+     #test>div>button{
+         margin-left: 10px; 
+         height: 30px;
+         border-radius: 5px;
+         background-color:rgb(15, 213, 15);
+         color: white;
+        font-weight: bold;
+         margin-top: -25px;
+        position: sticky;
+        cursor: pointer;      
+     }
+     #test>div>h3+button:hover{
+         background-color: red;
+     }
+   
+     #test>div>button+button{
+       
+         margin-left: 145px;
+        height: 30px;
+        width: 75px;
+        background-color: red;
+        color: white;
+      
+        
+
+     }
+     #test>div>button+button:hover{
+        background-color: rgb(15, 213, 15);
+     }
+     #test>div>h3{
+         text-align: center;
+         margin-top: 10px;
+        
+     }
+     #test>div>h3+p{
+        text-align: center;
+        color: grey;
+        font-size: 17px;
+        
+     }
+      #test>div>h3+p+h3{
+        text-align: center;
+        /* margin-top: 7px; */
+        margin: -10px;
+      }
+      #test>div>img{
+          width: 100%;
+          height: 310px;
+          margin-top: -30px;
+      }
+
+      #first{display:flex;justify-content: space-between;width:90%;margin:auto;margin-bottom:40px}
+#first>:nth-child(1){display: flex;justify-content: space-between;width:20%;}
+#first>:nth-child(2){display: flex;justify-content: space-between;width:45%;}
+#first>:nth-child(1)>a{text-decoration:none;color:black;font-family: Arial, Helvetica, sans-serif;}
+#first>:nth-child(1)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a{text-decoration:none;color:black;font-family:Verdana, Geneva, Tahoma, sans-serif}
+#sec{width:33.33%;display:flex;margin:auto}
+#sec>img{display:block;margin:auto;width:33.33%;}
+#sec{display:flex;width:90%};#sec>div{display:flex;justify-content:left;align-items:center;}
+#third{width:90%;display:flex;justify-content:space-between;background-color:white;padding:10px;
+    margin:auto;margin-top:35px;margin-bottom:5px;position:sticky;top:0}
+#third>:nth-child(1){width:55%;display:flex;justify-content:space-between;}
+#third>div>a{text-decoration:none;font-size:11px;color:#757575;font-family:Arial, Helvetica, sans-serif;}
+#third>div>a:hover{}
+#third>div+div{width:20%;
+    /* border: 1px solid green; */
+    height: 20px;
+}
+#third>div+div>a>h2{
+    margin-top: -5px;
+    margin-left: 30px;
+}
+#third>div+div>a>h2+img{
+    width: 30px;
+    margin-left: 20px;
+    padding: 30px;
+    margin-top: -1200px;
+   margin-left: 150px;
+
+       height: 20px;
+    
+}
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div><a href="">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">KIDS</a> </div>
+        <div><a href="">Signup for Newsletter</a>
+            <a href="">My Account</a>
+            <a href="favourite.html">My Wishlist</a></div>
+        </div>
+        <div id="sec"><img src="https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20220503T161145">
+        </div>
+        <div id="pos">
+        <div id="third">
+            <div><a href="new arrival.html">NEW ARRIVALS</a>
+                <a href="">DESIGNERS</a>
+                <a href="Clothing.html">CLOTHING</a>
+                <a href="shoes.html">SHOES</a>
+                <a href="bag.html">BAGS</a>
+                <a href="Accessories.html">ACCESSORIES</a>
+                <a href="jewellery.html">JEWELRY</a>
+                <a href="Vacation.html">VACATION</a>
+                <a href="SALE.html">SALE</a></div>
+        <div>
+            <a href="cart.html">
+                <h2 >SHOPPING BAG</h2>
+                <img src="https://cdn-icons-png.flaticon.com/512/687/687259.png"></a></div>
+        </div><hr/>
+        <p id="changeText"></p></div>
+     <div id="container"><h3>CLOTHING</h3></div>
+     <div id="box">
+         <p>Women / Clothing »</p>
+         <!-- <p>30 products</p> -->
+         <select id="sel" onchange="sort()">
+             <option value="sort">Sort By</option>
+             <option value="high">Low-to-high</option>
+             <option value="low">Price high-to-low</option>
+             <option value="new">New items</option> 
+            </select>
+            
+     </div>
+     <div class="list">
+           <p>CLOTHING</p>
+           <p>Show all</p>
+           <p>Dresses</p>
+           <p>Tops</p>
+           <p>Knitwear</p>
+           <p>Jackets</p>
+           <p>Coats</p>
+           <p>Pants</p>
+           <p>Skirts</p>
+           <p>Suits & Co-ords</p>
+           <p>Jeans</p>
+           <p>Shorts</p>
+           <p>Beachwear</p>
+           <p>Activewear</p>
+           <p>Jumpsuits</p>
+           <p>Leather</p>
+           <p>Bridal</p>
+           <p>Denim</p>
+           <p>Lingerie & hosiery</p>
+     </div>
+     <div class="designer"><h3>Designer</h3></div>
+     <div class="designers">
+        <ol>
+            <li>◻Alexandro </li>
+            <li>◻Alesperry </li>
+            <li>◻Alo Yoga</li>
+            <li>◻Altuzarra</li>
+            <li>◻Ami Paris</li>
+            <li>◻Ann Demer</li>
+            <li>◻Anna Kosturova</li>
+            <li>◻Area</li>
+            <li>◻Asceno</li>
+            <li>◻Balenciaga</li>
+            <li>◻Balmian</li>
+            <li>◻Barrie</li>
+            <li>◻Barrie</li>
+            <li>◻Biege</li>
+            <li>◻Blaze Milo</li>
+            <li>◻Bonger</li>
+            <li>◻Bottega</li>
+            <li>◻Brunello s</li>
+            <li>◻Cecilllie</li>
+            <li>◻chloe</li>
+            <li>◻CO</li>
+            <li>◻Coperni</li>
+            <li>◻David Koma</li>
+            <li>◻Deveaux N</li>
+            <li>◻Dodo Lee</li>
+            <li>◻Dodo Bar Or</li>
+            <li>◻Dolce </li>
+            <li>◻Dion Lee</li>
+            <li>◻Elie Saab</li>
+            <li>◻Fuslap</li>
+            <li>◻Galvan</li>
+            <li>◻Hunza</li>
+         </ol>
+     </div>
+     <div class="color"><h3>Color</h3></div>
+            
+               
+             <div class="colors">
+                <ol>
+                    <li>◻Blue</li>
+                    <li>◻Aqua</li>
+                    <li>◻Black</li>
+                    <li>◻White</li>
+                    <li>◻Brown</li>
+                    <li>◻Pink</li>
+                    <li>◻Green</li>
+                    <li>◻Grey</li>
+                    <li>◻Red</li>
+                    <li>◻White</li>
+                    <li>◻Sky Color</li>
+                    <li>◻Orange</li>
+                    <li>◻Dark Blue</li>
+                    <li>◻Biege</li>
+                    <li>◻Dark Green</li>
+                    <li>◻Dark Pink</li>
+                    <li>◻Blues</li>
+                    <li>◻Smoke White</li>
+                 </ol>
+             </div>
+             <div class="pattern"><h3>Pattern</h3>
+            
+               
+                <div class="patterns">
+                   <ol>
+                       <li>◻Checked</li>
+                       <li>◻Embellished</li>
+                       <li>◻Embroidered</li>
+                       <li>◻Floral</li>
+                       <li>◻Patternerd</li>
+                       <li>◻Plain</li>
+                       <li>◻Polka</li>
+                       <li>◻Polka Dots</li>
+                       <li>◻Printed</li>
+                       
+                    </ol>
+                </div>
+             <div id="test">
+
+            </div>
+</body>
+</html>
+<script>
+      var arr=JSON.parse(localStorage.getItem("cart")) || [];
+     console.log(arr)
+     var array=JSON.parse(localStorage.getItem("shopbag")) || [];
+     console.log(array)
+
+     var obj=JSON.parse(localStorage.getItem("paymentpage")) || [];
+
+      
+       var newarrivaldata=[
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/95/P00680170.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Printed silk Twill set dress",
+               price:"€ 1,295",
+           
+
+           },
+           {
+                fav:"♡",
+                img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d4/P00680171.jpg",
+               write:"DOLCE & GABBANA",
+               info:" Printed Twill Midi Skirt dress",
+               price:"€ 1,192",
+             
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/78/P00694477.jpg",
+               write:"GUCCI",
+               info:"Jucci Wool Cool Skirt dress",
+               price:"€ 322",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/f0/P00677180.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Floral Lace trimmed cotton dress",
+               price:"€ 2,095",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/70/P00675445.jpg",
+               write:"GUCCI",
+               info:" Printed cotton bumber jacket ",
+               price:"€ 1,895",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/8f/P00675424.jpg",
+               write:"GUCCI",
+               info:"Printed Cotton Midi Skirt",
+               price:"€ 2,695",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/6c/P00629755.jpg",
+               write:"DEVOUX NEW YORK",
+               info:"Marie Touch Coat",
+               price:"€ 2,345",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ee/P00661975.jpg",
+               write:"CHRISTOPER ESBER",
+               info:"Cutout Ribbed-Knit maxi dress",
+               price:"€ 1,475",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/f1/P00648291.jpg",
+               write:"EMILIA WICKSTEAD",
+               info:"Leila Floral Tefetta faille midi dress",
+               price:"€ 1,295",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/52/P00628692.jpg",
+               write:"GALVAN",
+               info:"Escape lido SElf tie satin Shirt",
+               price:"€ 1,005",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/3d/P00628695.jpg",
+               write:"GALVAN",
+               info:"Escape Lido plazzzo pants",
+               price:"€ 3,155",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/b6/P00651643.jpg",
+               write:"NORMA KAMALI",
+               info:"Chorchet maxi Dress",
+               price:"€ 1,295",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/1d/P00648293.jpg",
+               write:"CHRISTOPER ELBER",
+               info:"Embelished cutout maxi dress",
+               price:"€ 2,415",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/11/P00682747.jpg",
+               write:"AGOLDE",
+               info:"Chris chros high denim short",
+               price:"€ 509",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/73/P00675419.jpg",
+               write:"GUCCI",
+               info:"Gucci logo cotton hoodie ",
+               price:"€ 2,215",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ff/P00666718.jpg",
+               write:"RODARTE",
+               info:"Printed Silk Charmeouse slip dress ",
+               price:"€ 795",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/00/P00692177.jpg",
+               write:"GIL SANDHER",
+               info:"Cotton Mini Dress",
+               price:"€ 175",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ec/P00655309.jpg",
+               write:"GABRIELLA HEARST",
+               info:"Martha off shoulder linel maxi",
+               price:"€ 195",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ec/P00673380.jpg",
+               write:"NENSI DOJAKA",
+               info:"Exclusive to Mytheresa -Cutout Minidress",
+               price:"€ 290",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/82/P00651357.jpg",
+               write:"LOIUSA BALLOU",
+               info:"Helios Printed mess dress",
+               price:"€ 456",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/53/P00651368.jpg",
+               write:"LOIUSA BALLOU",
+               info:"Helios Printed Dress ",
+               price:"€ 900",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/aa/P00675083.jpg",
+               write:"GUCCI",
+               info:"Riffle Trimmed grafed dress",
+               price:"€ 300",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/48/P00673398.jpg",
+               write:"NENSI DOJAKA",
+               info:"Cutout Assymentric",
+               price:"€ 485",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/97/P00653974.jpg",
+               write:"NENSI DOJAKA",
+               info:"Cutout ruched minidress",
+               price:"€ 985",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/cb/P00677227.jpg",
+               write:"VARLEY",
+               info:"Haris leopard print",
+               price:"€ 195",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/0d/P00677222.jpg",
+               write:"VARLEY",
+               info:"Park printed sports bra",
+               price:"€ 395",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/80/P00439987.jpg",
+               write:"VINCE",
+               info:"cotton blend top",
+               price:"€ 495",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/b8/P00481815.jpg",
+               write:"Ganni",
+               info:"Leopardc printedbiker shorts ",
+               price:"€ 265",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7f/P00624252.jpg",
+               write:"JADE SWIM",
+               info:"Apex one shoulder bikny top",
+               price:"€ 795",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e1/P00624265.jpg",
+               write:"DOLCE & GABBANA",
+               info:"apex one bikny top ",
+               price:"€ 95",
+           
+
+           },
+          
+          
+       ]
+           
+  
+       newarrivaldata.map(function(element){
+               var box=document.createElement("div")
+
+
+               var favr=document.createElement("button")
+               favr.innerText=element.fav
+               favr.addEventListener("click",function(){
+                   addtowishlist(element)
+               });
+               
+               var image=document.createElement("img")
+               image.setAttribute("src",element.img_url)
+
+               var writen=document.createElement("h3")
+               writen.innerText=element.write
+               
+               var infor=document.createElement("p")
+               infor.innerText=element.info
+
+               var prices=document.createElement("h3")
+               prices.innerText=element.price
+
+               var button=document.createElement("button")
+               button.innerText="Add to shop"
+               button.addEventListener("click",function(){
+                   addtoshop(element)
+               });
+
+               var buttons=document.createElement("button")
+               buttons.innerText="Buy Now"
+               buttons.addEventListener("click",function(){
+                   buynow(element)
+               });
+
+               box.append(favr,image,writen,infor,prices,button,buttons)
+           document.querySelector("#test").append(box);
+          function displayData(data){
+              arr.push(data)
+              localStorage.setItem("fav",JSON.stringify(arr))
+          }
+           });
+           function addtowishlist(element){
+              arr.push(element)
+              alert("Your Product add to whistlist")
+               localStorage.setItem("cart",JSON.stringify(arr))
+           }
+           function addtoshop(element){
+              array.push(element)
+              alert("your product add to shop")
+               localStorage.setItem("shopbag",JSON.stringify(array))
+           }
+           function buynow(element){
+              obj.push(element)
+               localStorage.setItem("paymentpage",JSON.stringify(obj))
+           }
+
+
+
+</script>

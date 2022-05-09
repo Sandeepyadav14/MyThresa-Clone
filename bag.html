@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOES</title>
+    <style>
+        *{
+            font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+        }
+        #container{
+            /* border: 1px solid green; */
+            width: 100%;
+            height: 40px;
+            margin-top:15px
+        }
+        #container>h3{
+            text-align: center;
+        font-size: 22px;
+        margin-top:-1px;
+        color: grey;
+        }
+        .box{
+            width: 94%;
+        /* border: 1px solid green; */
+        display: flex;
+        margin: auto;
+        }
+        .box>div{
+            /* border: 1px solid red; */
+            width: 23%;
+            margin: auto;
+        }
+        .box>div>img{
+            width: 100%;
+        }
+        .boxes{
+            width: 94%;
+        /* border: 1px solid green; */
+        display: flex;
+        margin: auto;
+        }
+        .boxes>div{
+            /* border: 1px solid red; */
+            width: 23%;
+            margin: auto;
+            }
+            .boxes>div>p{
+                text-align: center;
+                color: grey;
+            }
+            #boss{
+            margin-top: 25px;
+            /* border: 1px solid green; */
+            width: 100%;
+            height: 40px;
+            display: flex;
+           
+        }
+        #boss>p{
+            color: grey;
+            margin: auto;
+            margin-left: 20px;
+            
+        }
+        .list{
+            width: 20%;
+           border-bottom: 1px solid grey;
+           
+        }
+        .list>p{
+           margin-left: 50px;
+           /* color: rgb(80, 78, 78); */
+           cursor: pointer;
+          color: grey;
+        }
+        .list>p:hover{
+            color: blue;
+        }
+        .designers{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 200px;
+     }
+     .designer>h3{
+        width: 50%;
+        position: sticky;
+     }
+     .designers>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+       color: grey;
+     }
+     .designers>ol>li{
+        line-height: -6px;
+        margin: 10px;
+     }
+     .designers>ol>li:hover{
+         color: blue;
+
+     }
+     .colors{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 200px;
+     }
+     .color>h3{
+        width: 50%;
+        position: sticky;
+     }
+     .colors>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+        color: grey;
+     }
+     .colors>ol>li{
+        line-height: -6px;
+        margin: 10px;
+     }
+     .colors>ol>li:hover{
+         color: blue;
+
+     }
+     .patterns{
+      margin-top: -19px;
+        border-bottom: 1px solid grey;
+        overflow-y: scroll;
+        width: 20%;
+        height: 150px;
+     }
+     .pattern>h3{
+        width: 50%;
+        position: sticky;
+     }
+     .patterns>ol{
+         margin-right: 90px;
+         list-style: none;
+         cursor: pointer;
+       color: grey;
+     }
+     .patterns>ol>li{
+        line-height: -6px;
+        margin: 10px;
+     }
+     .patterns>ol>li:hover{
+         color: blue;
+     }
+     
+     #test{
+         /* border: 1px solid red; */
+         display: grid;
+         grid-template-columns: repeat(3,1fr);
+         grid-template-rows: repeat(auto);
+         width: 75%; 
+         gap: 25px;
+          height: 800px;
+         margin-left: 310px;
+         margin-top: -1210px;
+        
+         
+     }
+     #test>div{
+          /* border: 1px solid grey; */
+          /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+          margin-top: 0px;
+     } 
+     #test>div>img:first-child{
+     width: 80%;
+     height: 60px;
+     margin-top: 2px;
+     }
+     #test>div>button:first-child{
+       border: none;
+       
+        font-size: 60px;
+        color: rgba(128, 128, 128, 0.512);
+       
+        background-color: white;
+        width:20%;
+        height: 50px;
+        margin-left: 270px;
+       
+        margin-right: 15px;
+       cursor: pointer;
+     }
+     #test>div>button:first-child:hover{
+       color: red;
+     }
+     #test>div>button{
+         margin-left: 10px; 
+         height: 30px;
+         border-radius: 5px;
+         background-color:rgb(15, 213, 15);
+         color: white;
+        font-weight: bold;
+         margin-top: -25px;
+        position: sticky;
+        cursor: pointer;      
+     }
+     #test>div>h3+button:hover{
+         background-color: red;
+     }
+   
+     #test>div>button+button{
+       
+         margin-left: 145px;
+        height: 30px;
+        width: 75px;
+        background-color: red;
+        color: white;
+      
+        
+
+     }
+     #test>div>button+button:hover{
+        background-color: rgb(15, 213, 15);
+     }
+     #test>div>h3{
+         text-align: center;
+         margin-top: 10px;
+        
+     }
+     #test>div>h3+p{
+        text-align: center;
+        color: grey;
+        font-size: 17px;
+        
+     }
+      #test>div>h3+p+h3{
+        text-align: center;
+        /* margin-top: 7px; */
+        margin: -10px;
+      }
+      #test>div>img{
+          width: 100%;
+          height: 310px;
+          margin-top: -30px;
+      }
+      #test>div>button+button{
+       
+         margin-left: 145px;
+        height: 30px;
+        width: 75px;
+        background-color: red;
+        color: white;
+      
+        
+
+     }
+     #test>div>button+button:hover{
+        background-color: rgb(15, 213, 15);
+     }
+      #first{display:flex;justify-content: space-between;width:90%;margin:auto;margin-bottom:40px}
+#first>:nth-child(1){display: flex;justify-content: space-between;width:20%;}
+#first>:nth-child(2){display: flex;justify-content: space-between;width:45%;}
+#first>:nth-child(1)>a{text-decoration:none;color:black;font-family: Arial, Helvetica, sans-serif;}
+#first>:nth-child(1)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a:hover{background-color:#f2f2f2;}
+#first>:nth-child(2)>a{text-decoration:none;color:black;font-family:Verdana, Geneva, Tahoma, sans-serif}
+#sec{width:33.33%;display:flex;margin:auto}
+#sec>img{display:block;margin:auto;width:33.33%;}
+#sec{display:flex;width:90%};#sec>div{display:flex;justify-content:left;align-items:center;}
+#third{width:90%;display:flex;justify-content:space-between;background-color:white;padding:10px;
+    margin:auto;margin-top:35px;margin-bottom:5px;position:sticky;top:0}
+#third>:nth-child(1){width:55%;display:flex;justify-content:space-between;}
+#third>div>a{text-decoration:none;font-size:11px;color:#757575;font-family:Arial, Helvetica, sans-serif;}
+#third>div>a:hover{}
+#third>div+div{width:20%;
+    /* border: 1px solid green; */
+    height: 20px;
+}
+#third>div+div>a>h2{
+    margin-top: -5px;
+    margin-left: 30px;
+}
+#third>div+div>a>h2+img{
+    width: 30px;
+    margin-left: 20px;
+    padding: 30px;
+    margin-top: -1200px;
+   margin-left: 150px;
+
+       height: 20px;
+    
+}
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div><a href="">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">KIDS</a> </div>
+        <div><a href="">Signup for Newsletter</a>
+            <a href="">My Account</a>
+            <a href="favourite.html">My Wishlist</a></div>
+        </div>
+        <div id="sec"><img src="https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20220503T161145">
+        </div>
+        <div id="pos">
+        <div id="third">
+            <div><a href="new arrival.html">NEW ARRIVALS</a>
+                <a href="">DESIGNERS</a>
+                <a href="Clothing.html">CLOTHING</a>
+                <a href="shoes.html">SHOES</a>
+                <a href="bag.html">BAGS</a>
+                <a href="Accessories.html">ACCESSORIES</a>
+                <a href="jewellery.html">JEWELRY</a>
+                <a href="Vacation.html">VACATION</a>
+                <a href="SALE.html">SALE</a></div>
+        <div>
+            <a href="cart.html">
+                <h2 >SHOPPING BAG</h2>
+                <img src="https://cdn-icons-png.flaticon.com/512/687/687259.png"></a></div>
+        </div><hr/>
+        <p id="changeText"></p></div>
+    <div id="container"><h3>BAGS</h3></div>
+    <div class="box">
+      <div><img src="https://img.mytheresa.com/media/static/raw/cms/l/CAT_BANNERS_SS22/CAT_BANNERS_Desktop_2x_29_20220228112047.jpg?imwidth=1180&imdensity=1" alt=""></div>
+        <div><img src="https://img.mytheresa.com/media/static/raw/cms/l/CAT_BANNERS_SS22/CAT_BANNERS_Desktop_2x_30_20220228112048.jpg?imwidth=1180&imdensity=1" alt=""></div>
+       
+        <div><img src="https://img.mytheresa.com/media/static/raw/cms/l/CAT_BANNERS_SS22/CAT_BANNERS_Desktop_2x_31_20220228112050.jpg?imwidth=1180&imdensity=1" alt=""></div>
+     <div><img src="https://img.mytheresa.com/media/static/raw/cms/l/CAT_BANNERS_SS22/CAT_BANNERS_Desktop_2x_32_20220228112048.jpg?imwidth=1180&imdensity=1" alt=""></div>
+    </div>
+    <div class="boxes">
+        <div><p>CROSSBODY BAG</p></div>
+        <div><p>TOTES</p></div>
+        <div><p>SHOULDER BAG</p></div>
+        <div><p>CLUTCHES</p></div>
+    </div>
+    <div id="boss">
+        <p>Women / bags »</p>
+        <!-- <p>30 products</p> -->
+        <select id="sel" onchange="sort()">
+            <option value="sort">Sort By</option>
+            <option value="high">Low-to-high</option>
+            <option value="low">Price high-to-low</option>
+            <option value="new">New items</option> 
+           </select>
+           
+    </div>
+    <div class="list">
+        <p>BAGS</p>
+        <p>Show all</p>
+        <p>Shoulder Bags</p>
+        <p>Crossbody Bags</p>
+        <p>Tote Bags</p>
+        <p>Clutches </p>
+        <p>Evening bags</p>
+        <p>Top-Habdle Bags</p>
+        <p>Beach Bags</p>
+        <p>Bucket Bags</p>
+        <p>Backpacks</p>
+        <p>Belt Bags</p>
+        <p>Travel & Luggge</p>
+        <p>Trending Bags</p>
+        <p>Bridal Bas</p>
+        <p>Platform Bags</p>
+       
+  </div>
+  <div class="designer"><h3>Designer</h3></div>
+     <div class="designers">
+        <ol>
+            <li>◻Alexandro </li>
+            <li>◻Alesperry </li>
+            <li>◻Alo Yoga</li>
+            <li>◻Altuzarra</li>
+            <li>◻Ami Paris</li>
+            <li>◻Ann Demer</li>
+            <li>◻Anna Kosturova</li>
+            <li>◻Area</li>
+            <li>◻Asceno</li>
+            <li>◻Balenciaga</li>
+            <li>◻Balmian</li>
+            <li>◻Barrie</li>
+            <li>◻Barrie</li>
+            <li>◻Biege</li>
+            <li>◻Blaze Milo</li>
+            <li>◻Bonger</li>
+            <li>◻Bottega</li>
+            <li>◻Brunello s</li>
+            <li>◻Cecilllie</li>
+            <li>◻chloe</li>
+            <li>◻CO</li>
+            <li>◻Coperni</li>
+            <li>◻David Koma</li>
+            <li>◻Deveaux N</li>
+            <li>◻Dodo Lee</li>
+            <li>◻Dodo Bar Or</li>
+            <li>◻Dolce </li>
+            <li>◻Dion Lee</li>
+            <li>◻Elie Saab</li>
+            <li>◻Fuslap</li>
+            <li>◻Galvan</li>
+            <li>◻Hunza</li>
+         </ol>
+     </div>
+     <div class="color"><h3>Color</h3></div>
+            
+               
+             <div class="colors">
+                <ol>
+                    <li>◻Blue</li>
+                    <li>◻Aqua</li>
+                    <li>◻Black</li>
+                    <li>◻White</li>
+                    <li>◻Brown</li>
+                    <li>◻Pink</li>
+                    <li>◻Green</li>
+                    <li>◻Grey</li>
+                    <li>◻Red</li>
+                    <li>◻White</li>
+                    <li>◻Sky Color</li>
+                    <li>◻Orange</li>
+                    <li>◻Dark Blue</li>
+                    <li>◻Biege</li>
+                    <li>◻Dark Green</li>
+                    <li>◻Dark Pink</li>
+                    <li>◻Blues</li>
+                    <li>◻Smoke White</li>
+                 </ol>
+             </div>
+             <div class="pattern"><h3>Pattern</h3>
+            
+               
+                <div class="patterns">
+                   <ol>
+                       <li>◻Checked</li>
+                       <li>◻Embellished</li>
+                       <li>◻Embroidered</li>
+                       <li>◻Floral</li>
+                       <li>◻Patternerd</li>
+                       <li>◻Plain</li>
+                       <li>◻Polka</li>
+                       <li>◻Polka Dots</li>
+                       <li>◻Printed</li>
+                       
+                    </ol>
+                </div>
+                <div id="test">
+
+                </div>
+</body>
+</html>
+<script>
+     var arr=JSON.parse(localStorage.getItem("cart")) || [];
+     
+     var array=JSON.parse(localStorage.getItem("shopbag")) || [];
+     console.log(array)
+
+     var obj=JSON.parse(localStorage.getItem("paymentpage")) || [];
+
+
+     var newarrivaldata=[
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/da/P00657414.jpg",
+               write:"GUCCI",
+               info:"GG marmount Leather bag",
+               price:"€ 695",
+           
+
+           },
+           {
+                fav:"♡",
+                img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e1/P00671874.jpg",
+               write:"SAINT LURENT",
+               info:" Sac de jaour mini bag",
+               price:"€ 1,292",
+             
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d5/P00671815.jpg",
+               write:"SAINT LURENT",
+               info:"Kate medium leather bag",
+               price:"€ 1,322",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/04/P00692953.jpg",
+               write:"PUCCI",
+               info:"Woven tote bag",
+               price:"€ 815",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/de/P00692954.jpg",
+               write:"PUCCI",
+               info:"Rafila tote bag  ",
+               price:"€ 895",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/45/P00670017.jpg",
+               write:"VELENTINO GARAVANANI",
+               info:" One stood small leather tote ",
+               price:"€ 695",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/c6/P00671819.jpg",
+               write:"SAINT LURENT",
+               info:"Le 5 Ea 7 leather bag",
+               price:"€ 1,345",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/4e/P00685475.jpg",
+               write:"JIMMY CHOO",
+               info:"Callie Crystal Embalished ",
+               price:"€ 475",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2d/P00685520.jpg",
+               write:"PACCO RABANNE",
+               info:"Emblished rafia shoulder bag",
+               price:"€ 295",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e9/P00659350.jpg",
+               write:"GIVENCHY",
+               info:"Antigona 4G embrshed bag",
+               price:"€ 3,105",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/af/P00657413.jpg",
+               write:"PACO RABBANE",
+               info:"Printes canvas tote bag",
+               price:"€ 955",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2f/P00671808.jpg",
+               write:"SAINT LURENT",
+               info:"Jamie carve bag",
+               price:"€ 1,295",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7a/P00671836.jpg",
+               write:"SAINT LURENT ",
+               info:"Nikki medium refia bag",
+               price:"€ 415",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/99/P00658538.jpg",
+               write:"CHLOE",
+               info:"Woody Small Canvas bag",
+               price:"€ 509",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ba/P00650631.jpg",
+               write:"CHRISTAN LOUBITTION",
+               info:"Marie jen lether bag ",
+               price:"€ 1,215",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a9/P00671812.jpg",
+               write:"DOLCE & GABBANA",
+               info:"Devotion Large bag ",
+               price:"€ 795",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/52/P00675630.jpg",
+               write:"GUCCI",
+               info:"Dinounys GG mini bag",
+               price:"€ 975",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/05/P00604254.jpg",
+               write:"MARC JOBAS",
+               info:"The travel small bag",
+               price:"€ 1,195",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d7/P00658511.jpg",
+               write:"BALENCIAGA",
+               info:"Le cagole mini leather bag",
+               price:"€ 690",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/99/P00682230.jpg",
+               write:"LOEWE",
+               info:"Basket woven bag",
+               price:"€ 456",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a9/P00695358.jpg",
+               write:"MERNI",
+               info:"Meuso leather and denim bag ",
+               price:"€ 920",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/18/P00592619.jpg",
+               write:"TORY BURCH",
+               info:"T monogram mini bag",
+               price:"€ 300",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/4e/P00669599.jpg",
+               write:"ZIMMERMANN",
+               info:"Large raffia tote",
+               price:"€ 685",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/f5/P00693023.jpg",
+               write:"GIVENCHY",
+               info:"Antogona mini teather tote",
+               price:"€ 985",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/d3/P00659351.jpg",
+               write:"GIVENCHY",
+               info:"Moon cut small leather bag ",
+               price:"€ 595",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/3b/P00684818.jpg",
+               write:"BOTTEGA VENETA",
+               info:"Cassete nylon bag",
+               price:"€ 295",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/49/P00671809.jpg",
+               write:"SAINT LURENT",
+               info:"Raffia shoulder bag",
+               price:"€ 295",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2f/P00671808.jpg",
+               write:"SAINT LURENT",
+               info:"Raffia shoulder bag",
+               price:"€ 965",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/f1/P00649605.jpg",
+               write:"VENEGA BONNETE",
+               info:"Padded jodi shoulder bag",
+               price:"€ 795",
+           
+
+           },
+           {
+                fav:"♡",
+               img_url:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ba/P00685519.jpg",
+               write:"GUCCI",
+               info:"Palmoa leather clutches",
+               price:"€ 859",
+           
+
+           },
+          
+          
+       ]
+           
+  
+       newarrivaldata.map(function(element){
+               var box=document.createElement("div")
+
+
+               var favr=document.createElement("button")
+               favr.innerText=element.fav
+               favr.addEventListener("click",function(){
+                   addtowishlist(element)
+               });
+               
+               var image=document.createElement("img")
+               image.setAttribute("src",element.img_url)
+
+               var writen=document.createElement("h3")
+               writen.innerText=element.write
+               
+               var infor=document.createElement("p")
+               infor.innerText=element.info
+
+               var prices=document.createElement("h3")
+               prices.innerText=element.price
+
+               var button=document.createElement("button")
+               button.innerText="Add to shop"
+               button.addEventListener("click",function(){
+                   addtoshop(element)
+               });
+
+               var buttons=document.createElement("button")
+               buttons.innerText="Buy Now"
+               buttons.addEventListener("click",function(){
+                   buynow(element)
+               });
+
+               box.append(favr,image,writen,infor,prices,button,buttons)
+           document.querySelector("#test").append(box);
+         
+           });
+           function addtowishlist(element){
+              arr.push(element)
+              alert("Your Product add to whistlist")
+               localStorage.setItem("cart",JSON.stringify(arr))
+           }
+           function addtoshop(element){
+              array.push(element)
+              alert("your product add to shop")
+               localStorage.setItem("shopbag",JSON.stringify(array))
+           }
+           function buynow(element){
+              obj.push(element)
+               localStorage.setItem("paymentpage",JSON.stringify(obj))
+           }
+
+           var text = ["Free Return Within 30 Days", "FREE SHIPPING on orders over 800",];
+var counter = 0;
+var elem = document.getElementById("changeText");
+var inst = setInterval(change, 1000);
+
+function change() {
+  elem.innerHTML = text[counter];elem.style.color="#9f2943";elem.style.textAlign="center";
+  counter++;
+  if (counter >= text.length) {
+    counter = 0;
+    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+  }
+}
+</script>
